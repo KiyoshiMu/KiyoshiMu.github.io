@@ -3947,11 +3947,21 @@ li.feature-2 {
         width: 100px !important;
         height: 100px !important;
     }
+    .focusinfo .center-text {
+        font-size:40px !important;
+    }
     .header-info {
         width: 90% !important;
+        overflow-wrap: break-word !important;
+
     }
     .header-info:before {
         top: 98px !important;
+        overflow-wrap: break-word !important;
+    }
+    .header-info p {
+        font-size:12px !important;
+        font-weight: 600 !important;
     }
     .top-social_v2 li {
         margin-right: 0px !important; 
@@ -4078,7 +4088,7 @@ li.feature-2 {
     color:#2c3e50
 }
 .header-info {
-    width:63%;
+    width:70%;
     margin:auto;
     font-size:16px;
     color:#eaeadf;
@@ -4104,7 +4114,8 @@ li.feature-2 {
 .header-info p {
     margin:0;
     font-family:'Ubuntu',sans-serif;
-    font-weight:700
+    font-weight:600;
+    font-size: medium;
 }
 .top-social {
     height:32px;
@@ -5819,7 +5830,7 @@ button.botui-actions-buttons-button {
     font-weight:800;
     height:56px;
     line-height:56px;
-    padding-left:6px;
+    padding-left:8px;
     padding-right:15px;
     padding-top:11px;
     text-decoration-line:none

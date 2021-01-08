@@ -80,7 +80,7 @@ function bot_ui_ini() {
                 }).then(function () {
                     botui.message.add({
                         delay: 4000,
-                        content: "I hope to contribute to adopting new technologies, like cloud computing and machine learning in the healthcare industry."
+                        content: "I hope to contribute to adopting new technologies, like [cloud computing](https://www.credential.net/3f6ca15f-b805-462a-a1bc-ff985e20cc51) and [machine learning](https://www.credential.net/bf1a22bb-b0a7-4588-8303-3cb8b095f080) in the healthcare industry."
                     }).then(function () {
                         botui.message.add({
                             delay: 4500,
