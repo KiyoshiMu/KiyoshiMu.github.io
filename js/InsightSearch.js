@@ -10,12 +10,12 @@
     $main.parent().remove('.ins-search');
     $('body').append($main);
 
-    function section (title) {
+    function section(title) {
         return $('<section>').addClass('ins-section')
             .append($('<header>').addClass('ins-section-header').text(title));
     }
 
-    function searchItem (icon, title, slug, preview, url) {
+    function searchItem(icon, title, slug, preview, url) {
         return $('<div>').addClass('ins-selectable').addClass('ins-search-item')
             .append($('<header>').append($('<i>').addClass('fa').addClass('fa-' + icon)).append(title != null && title != '' ? title : CONFIG.TRANSLATION['UNTITLED'])
                 .append(slug ? $('<span>').addClass('ins-slug').text(slug) : null))
@@ -23,7 +23,7 @@
             .attr('data-url', url);
     }
 
-    function sectionFactory (type, array) {
+    function sectionFactory(type, array) {
         var sectionTitle;
         var $searchItems;
         if (array.length === 0) return null;
@@ -48,7 +48,7 @@
         return section(sectionTitle).append($searchItems);
     }
 
-    function extractToSet (json, key) {
+    function extractToSet(json, key) {
         var values = {};
         var entries = json.pages.concat(json.posts);
         entries.forEach(function (entry) {
@@ -65,7 +65,7 @@
         return result;
     }
 
-    function parseKeywords (keywords) {
+    function parseKeywords(keywords) {
         return keywords.split(' ').filter(function (keyword) {
             return !!keyword;
         }).map(function (keyword) {
@@ -78,7 +78,7 @@
      * @param Object            obj     Object to be weighted
      * @param Array<String>     fields  Object's fields to find matches
      */
-    function filter (keywords, obj, fields) {
+    function filter(keywords, obj, fields) {
         var result = false;
         var keywordArray = parseKeywords(keywords);
         var containKeywords = keywordArray.filter(function (keyword) {
@@ -95,7 +95,7 @@
         return containKeywords.length === keywordArray.length;
     }
 
-    function filterFactory (keywords) {
+    function filterFactory(keywords) {
         return {
             POST: function (obj) {
                 return filter(keywords, obj, ['title', 'text']);
@@ -118,7 +118,7 @@
      * @param Array<String>     fields  Object's fields to find matches
      * @param Array<Integer>    weights Weight of every field
      */
-    function weight (keywords, obj, fields, weights) {
+    function weight(keywords, obj, fields, weights) {
         var value = 0;
         parseKeywords(keywords).forEach(function (keyword) {
             var pattern = new RegExp(keyword, 'img'); // Global, Multi-line, Case-insensitive
@@ -132,7 +132,7 @@
         return value;
     }
 
-    function weightFactory (keywords) {
+    function weightFactory(keywords) {
         return {
             POST: function (obj) {
                 return weight(keywords, obj, ['title', 'text'], [3, 1]);
@@ -149,7 +149,7 @@
         };
     }
 
-    function search (json, keywords) {
+    function search(json, keywords) {
         var WEIGHTS = weightFactory(keywords);
         var FILTERS = filterFactory(keywords);
         var posts = json.posts;
@@ -164,14 +164,14 @@
         };
     }
 
-    function searchResultToDOM (searchResult) {
+    function searchResultToDOM(searchResult) {
         $container.empty();
         for (var key in searchResult) {
             $container.append(sectionFactory(key.toUpperCase(), searchResult[key]));
         }
     }
 
-    function scrollTo ($item) {
+    function scrollTo($item) {
         if ($item.length === 0) return;
         var wrapperHeight = $wrapper[0].clientHeight;
         var itemTop = $item.position().top - $wrapper.scrollTop();
@@ -184,7 +184,7 @@
         }
     }
 
-    function selectItemByDiff (value) {
+    function selectItemByDiff(value) {
         var $items = $.makeArray($container.find('.ins-selectable'));
         var prevPosition = -1;
         $items.forEach(function (item, index) {
@@ -199,7 +199,7 @@
         scrollTo($($items[nextPosition]));
     }
 
-    function gotoLink ($item) {
+    function gotoLink($item) {
         if ($item && $item.length) {
             location.href = $item.attr('data-url');
         }
@@ -216,28 +216,55 @@
         $input.trigger('input');
     });
 
-
-    $(document).on('click focus', '.search-field', function () {
+    let touch = false;
+    $(document)
+      .on('click focus', '.search-field', () => {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
-    }).on('click focus', '.search-form-submit', function () {
+      })
+      .on('click focus', '.search-form-submit', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
-    }).on('click', '.ins-search-item', function () {
+      })
+      .on('click touchend', '.ins-search-item', function (e) {
+        if (e.type !== 'click' && !touch) {
+          return;
+        }
         gotoLink($(this));
-    }).on('click', '.ins-close', function () {
+        touch = false;
+      })
+      .on('click touchend', '.ins-close', (e) => {
+        if (e.type !== 'click' && !touch) {
+          return;
+        }
+        $('.navbar').css('pointer-events', 'none');
+        setTimeout(() => {
+          $('.navbar').css('pointer-events', 'auto');
+        }, 400);
         $main.removeClass('show');
-    }).on('keydown', function (e) {
+        touch = false;
+      })
+      .on('keydown', (e) => {
         if (!$main.hasClass('show')) return;
         switch (e.keyCode) {
-            case 27: // ESC
-                $main.removeClass('show'); break;
-            case 38: // UP
-                selectItemByDiff(-1); break;
-            case 40: // DOWN
-                selectItemByDiff(1); break;
-            case 13: //ENTER
-                gotoLink($container.find('.ins-selectable.active').eq(0)); break;
+          case 27: // ESC
+            $main.removeClass('show');
+            break;
+          case 38: // UP
+            selectItemByDiff(-1);
+            break;
+          case 40: // DOWN
+            selectItemByDiff(1);
+            break;
+          case 13: // ENTER
+            gotoLink($container.find('.ins-selectable.active').eq(0));
+            break;
         }
-    });
+      })
+      .on('touchstart', (e) => {
+        touch = true;
+      })
+      .on('touchmove', (e) => {
+        touch = false;
+      });
 })(jQuery, window.INSIGHT_CONFIG);
