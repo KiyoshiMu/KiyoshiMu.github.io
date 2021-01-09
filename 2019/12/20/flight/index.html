@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://drive.google.com/uc?id=1Kt0TTVpVVUmIS7tdXUbvLjSIKCT-jPVU,https://drive.google.com/uc?id=1bcI1LW_vEgoYQfs4H1VstL5jKWDEzG4q,https://drive.google.com/uc?id=1PVsC2cd9VWoActLBVA3zba3iUD6v1HRH".split(",");
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert("Hey there, we haven't added support for IE yet~");
@@ -73,7 +73,7 @@
     <div class="focusinfo no-select">
       <!-- <div class="header-tou">
         <a href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
-          <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
         </a>
       </div> -->
       <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
@@ -225,7 +225,7 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://drive.google.com/uc?id=1v8_qhwvAk7bzqKSIrUH3NCWLevRF_sAb);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1v8_qhwvAk7bzqKSIrUH3NCWLevRF_sAb">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/flight/flight.svg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/flight/flight.svg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -233,7 +233,7 @@
       <p class="entry-census">
         <span>
           <a href="">
-            <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
           </a>
         </span>
         <span>
@@ -272,25 +272,25 @@
 <li>Deploy the model</li>
 </ol>
 <h3 id="Microservices-achieve-automatically-downloading"><a href="#Microservices-achieve-automatically-downloading" class="headerlink" title="Microservices achieve automatically downloading"></a>Microservices achieve automatically downloading</h3><p>In this part, I prepared the data to train the goal model. Below is the diagram of this part.</p>
-<p><img src="https://drive.google.com/uc?id=1fajRqY0bPMYb_jSK3fFIqJ6j0gE2-Clm" alt="Automatically downloading"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/airweb.jpg" alt="Automatically downloading"></p>
 <p>I used Cloud Schedule, Cloud Pubsub, Cloud Functions, and Cloud Dataflow as microservices together to perform monthly auto-downloading, processing, and saving tasks.</p>
 <p>The Cloud Scheduler will initiate a message sending to Cloud Pubsub’s “monthly-reminder” topic. When the message comes, it’ll trigger a Cloud Function, downloading the latest monthly data from the Transtats, unzip it, changing the name, and save it as a CSV file to the Cloud Storage. When the new CSV file is successfully saved in Cloud Storage, it’ll trigger another Cloud Function, which will submit a job to Cloud Dataflow. Cloud Dataflow will then digest the new data, do some transformation, and finally, sink it into Bigquery, the data warehouse.</p>
-<h4 id="Cloud-Dataflow-–-Data-Preparision"><a href="#Cloud-Dataflow-–-Data-Preparision" class="headerlink" title="Cloud Dataflow – Data Preparision"></a>Cloud Dataflow – Data Preparision</h4><p><img src="https://drive.google.com/uc?id=1qF9De0UdQBTd8BKPLOa70FFvotclpVN0" alt="Processing situation"></p>
+<h4 id="Cloud-Dataflow-–-Data-Preparision"><a href="#Cloud-Dataflow-–-Data-Preparision" class="headerlink" title="Cloud Dataflow – Data Preparision"></a>Cloud Dataflow – Data Preparision</h4><p><img src="https://storage.googleapis.com/portport/imgs/flight/dataflow.jpg" alt="Processing situation"></p>
 <h3 id="Bigquery-Datastudio-–-Data-Exploration"><a href="#Bigquery-Datastudio-–-Data-Exploration" class="headerlink" title="Bigquery + Datastudio – Data Exploration"></a>Bigquery + Datastudio – Data Exploration</h3><p>Bigquery is the data warehouse, and its cost is equivalent to the cost of Google Storage. As a result, the cost will not increase even if I store the data in this place to interact with the data.</p>
 <p>What do I mean by “interact with the data”? In Bigquery, I can query questions I am interested in, like whether some carriers are more likely to have a late arrival or whether seasons can influence the flights’ delay. Besides, the data can be loaded into Data Studio, a visualization tool based on Bigquery.</p>
 <p>Here, I show the result of my question below. The type of carrier, the season, the distance, and the locations have relations with the delay, which fit my intuition. (I know you will be more excited about something anti-intuition).</p>
-<p><img src="https://drive.google.com/uc?id=11tMFzjF0TTVhDA0qfnSDf-24AKS22BLJ" alt="Data Studio answers my questions"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/flight_report.jpg" alt="Data Studio answers my questions"></p>
 <p>Moreover, it’s not a static visualization tool. When I say it’s based on Bigquery, I mean you can “query” data by touching these icons. For example, you can select a specific date range. All the visualization will change automatically as a result.</p>
-<p><img src="https://drive.google.com/uc?id=1To5-zfdNiP2rRNkKMB4o5euL2__TZ_Um" alt="Data Studio Interaction"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/studio_change.png" alt="Data Studio Interaction"></p>
 <p>From the exploration in Data Studio, I notice that the carriers, locations, department delay, distance, and DateTime more or less can influence the delay of the flight. Therefore, I selected related features, including ‘arr_lat’, ‘dep_lat’, ‘dep_lng’, ‘arr_lng’, ‘DEP_DELAY’, ‘DISTANCE’, ‘hour’, ‘month’, and ‘MKT_UNIQUE_CARRIER’ to train a sophisticated model. But before that, let’s come back to Bigquery.</p>
 <p>Bigquery is not just a tool providing essential SQL functions. I can build a logistic model here as a baseline for my future sophisticated deep learning model.</p>
 <p>I used the “rand()” function to sample the training dataset, evaluation dataset, and test dataset. Oh, don’t forget as common sense in machine learning – it’s essential to have balanced negative and positive samples in the training data, i.e., having a similar amount of “cancel” data and “non-cancel” data. Then, I can use the ML training function in Bigquery to train the first basic model for this dataset and see its performance.</p>
-<p><img src="https://drive.google.com/uc?id=1jVqAZVudxb0qPRUmQfVBW_Xszlckw1Cs" alt="Bigquery Training"></p>
-<p><img src="https://drive.google.com/uc?id=1gceKLB-DnpypXaaN1C2OHZwZu-7cSRwN" alt="Bigquery Training Result"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bq_train.jpg" alt="Bigquery Training"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bqbase.jpg" alt="Bigquery Training Result"></p>
 <p>Don’t be fool by the training result, and the below is the real evaluation performance. Nice, the logistic model can achieve AUC around 0.798. And it’s the baseline I need to break.</p>
-<p><img src="https://drive.google.com/uc?id=1DbvYuLFTOYeNKPOXqnsfgKbbWav1PJpk" alt="Bigquery Evaulation"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bqeval.jpg" alt="Bigquery Evaulation"></p>
 <h3 id="Model-Training"><a href="#Model-Training" class="headerlink" title="Model Training"></a>Model Training</h3><p>In this part, I trained four types of models and deployed the best. Below is the diagram of this part.</p>
-<p><img src="https://drive.google.com/uc?id=1iG0p1gp6zJ2SSODHrsqXbCyCMYn1ODVz" alt="Model Training"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/model_train.jpg" alt="Model Training"></p>
 <p>To train a machine learning model, I think, is just like cooking. If there is a recipe, I should try the existing recipe first. To reinvent pizza is not fun, and the new pizza may not as tasty as the “experienced” pizza. In the AI Platform, there are three build-in algorithms, and I should try them first.</p>
 <p>The three algorithms are XGBoost, wide and deep model, and linear learner model. XGBoost tree is a kind of traditional machine learning model. Like random forest tree, it’s based on decision tree ensembles, which combine the results of multiple classifications and regression models. The wide and deep model combines a linear model that learns and “memorizes” a wide range of rules with a deep neural network that “generalizes” the rules. A linear learner model assigns one weight to each input feature and sums the weights to predict a numerical target value. See more <a href="https://cloud.google.com/ml-engine/docs/algorithms/overview" target="_blank" rel="noopener">details</a>.</p>
 <p>Their final evaluation results are compared as follows. Strangely, this final evaluation in logging for build-in algorithms seems only to use part of the evaluation data. As a result, I have to evaluate the best built-in models by using all the evaluation data.</p>
@@ -318,18 +318,18 @@
 </table>
 <p>The wide and deep model performs the best here. Now, it’s time to write my code and see whether I could beat Google’s automation.</p>
 <p>Luckily, mine is better than Google’s automatic data processing and model creation.</p>
-<p><img src="https://drive.google.com/uc?id=1F8jtM-aLSBQ0ZUlPPZuXDiDfr5cY4HtO" alt="Best Model"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/final_auc.jpg" alt="Best Model"></p>
 <p>Here, we can do model examinations to know the model’s pros and cons and then can “targeted” refined the model. For example, use the <a href="https://pair-code.github.io/what-if-tool/" target="_blank" rel="noopener">What-if tool</a>. However, from my experiences, this tool is not friendly with the AI Platform. Also, it’s not directly related to GCP. So, I skip this part.</p>
 <p>Then, it’s time to deploy the model.</p>
 <h3 id="Model-Deployment"><a href="#Model-Deployment" class="headerlink" title="Model Deployment"></a>Model Deployment</h3><p>In this part, I used the Google Sheet as the platform and AI-platform as the backend to deploy my model. Below is the diagram of this part. And the idea of using Google Sheet in this way is from “<a href="https://www.youtube.com/watch?v=vnm6ViI06MM" target="_blank" rel="noopener">How to Grow a Spreadsheet into an Application, Google Next 2019</a>“</p>
-<p><img src="https://drive.google.com/uc?id=1muMmpnFohK8wQAV7xl9Afb6s1axrp8rc" alt="Model Deployment"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/deploy.jpg" alt="Model Deployment"></p>
 <p>As mentioned in one of my previous posts, here come at least three solutions.</p>
 <p>First, simply click the “Deploy Model”. Then GCP will deploy it on ML engines and handle all the other processes. Second, you can deploy the model by yourself, and using docker to make the model service containerized is the option. It’s super fast to write a Dockerfile based on <a href="https://github.com/tensorflow/serving" target="_blank" rel="noopener">TensorFlow Serving</a> and use <a href="https://cloud.google.com/cloud-build/" target="_blank" rel="noopener">Google Build</a> to wrap the model into a container and deploy it to <a href="https://cloud.google.com/kubernetes-engine/" target="_blank" rel="noopener">Kubernetes</a>. Last, to achieve full DIY, you can choose to use a VM and do what you want. In this case, you have to set the networking forwarding rules, safety rules, etc..</p>
 <p>For simplicity, I selected the first option. Here, it’s worth to notice that to invoke a model deployed on Google ML engines, a role for “ML Engine Developer” is <a href="https://cloud.google.com/ml-engine/docs/access-control" target="_blank" rel="noopener">needed</a>. A helpful practice is to create a server account with this role and grant this server account to a microserver on Google Functions.</p>
 <p>I chose Google Sheet as the platform to create a demo APP. Google Sheet has the database, UI, security, and loads of built-in APIs. To match this platform, I used Google Forms as the APP UI.</p>
-<p><img src="https://drive.google.com/uc?id=1AE1WysazzBxzJ8oncareF10d5yi9T90K" alt="Sample Msg"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/msg.jpg" alt="Sample Msg"></p>
 <h3 id="Wrap-Up"><a href="#Wrap-Up" class="headerlink" title="Wrap Up"></a>Wrap Up</h3><p>Let’s wrap up with the whole structure.</p>
-<p><img src="https://drive.google.com/uc?id=1-7B5dnR9moZw8g4w9OKjHkYVLngnmp15" alt="Whole Structure"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/whole_air.jpg" alt="Whole Structure"></p>
 <h2 id="Better-Solutions-I-know-now"><a href="#Better-Solutions-I-know-now" class="headerlink" title="Better Solutions I know now"></a>Better Solutions I know now</h2><p>Convert the model as Tensorflow.JS and deploy it on the client-side to achieve zero maintenance cost.</p>
 <p>Use Flutter or Angular to write a more beautiful and customized UI.</p>
 
@@ -355,7 +355,7 @@
           
             <a href="/2020/04/10/kidney_app/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/kk/architecture.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/kk/architecture.png">
               </div>
               <span class="label">
               Previous Post</span>
@@ -373,7 +373,7 @@
           
             <a href="/2019/06/12/survival_analysis/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1lQA8-uaMyD2KGdEyM73QTTea-2Q4TiWx" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=1lQA8-uaMyD2KGdEyM73QTTea-2Q4TiWx">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/snbcs/banner.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/snbcs/banner.svg">
               </div>
               <span class="label">
               Next Post</span>
@@ -389,7 +389,7 @@
       
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
@@ -538,7 +538,7 @@ $(document).ready(function() {
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
   </div>
   <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
   <p style="text-align: center; word-spacing: 20px;">

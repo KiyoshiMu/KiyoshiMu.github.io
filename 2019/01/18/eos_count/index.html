@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://drive.google.com/uc?id=1Kt0TTVpVVUmIS7tdXUbvLjSIKCT-jPVU,https://drive.google.com/uc?id=1bcI1LW_vEgoYQfs4H1VstL5jKWDEzG4q,https://drive.google.com/uc?id=1PVsC2cd9VWoActLBVA3zba3iUD6v1HRH".split(",");
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert("Hey there, we haven't added support for IE yet~");
@@ -73,7 +73,7 @@
     <div class="focusinfo no-select">
       <!-- <div class="header-tou">
         <a href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
-          <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
         </a>
       </div> -->
       <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
@@ -225,7 +225,7 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://drive.google.com/uc?id=1b95qYHjBXMgi_nyEqmo5JMLPngJPm7I8);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1b95qYHjBXMgi_nyEqmo5JMLPngJPm7I8">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/eos/eosinophil.svg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/eos/eosinophil.svg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -233,7 +233,7 @@
       <p class="entry-census">
         <span>
           <a href="">
-            <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
           </a>
         </span>
         <span>
@@ -257,19 +257,24 @@
         <div class="entry-content">
           <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This project was set up by Data and Computer Science department, Sun Yat-sen University, and Sun Yat-sen Memorial Hospital. It aims to build a framework that could train a model to “learn” to detect any types of cells they want. And the first type they chose is the <a href="https://en.wikipedia.org/wiki/Eosinophil" target="_blank" rel="noopener"><em>Eosinophils</em></a>(EOS) , which is vital in clinical testing and somewhat easy to be recognized.</p>
 <p>Two other medical students and I were invited to try the water. The model was supposed to be used in personal computers, especially laptops. We started with three labeled slides. On each of the slides, there are about 100 - 200 <em>Eosinophils</em>. The figure below is an example.</p>
-<p><img src="https://drive.google.com/uc?id=1J51vxy0B5uJzOhMlsfiWlqQyG0ykbsJB" alt="Our starting point" title="Our starting point"></p>
-<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><p>How to train a model that can detect <em>Eosinophils</em> in a “<em>reasonable correctness</em>“ (academic study sometimes starts with an ambiguous aim)?</p>
-<p>How to make this model run on laptops?</p>
-<p>How to used limited resources for labeling to generate the most labels?</p>
-<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p><img src="https://drive.google.com/uc?id=1OjxGTg4-Ja8LpGvlWH40YsiZiphKg9WH" alt="Solutions" title="Solutions I applied"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/label.jpg" alt="Our starting point" title="Our starting point"></p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li><p>How to train a model that can detect <em>Eosinophils</em> in a “<em>reasonable correctness</em>“ (academic study sometimes starts with an ambiguous aim)?</p>
+</li>
+<li><p>How to make this model run on laptops?</p>
+</li>
+<li><p>How to used limited resources for labeling to generate the most labels?</p>
+</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p><img src="https://storage.googleapis.com/portport/imgs/eos/eos_solution.png" alt="Solutions" title="Solutions I applied"></p>
 <p>First, I tried to use <a href="https://github.com/tensorflow/models/tree/master/research/object_detection" target="_blank" rel="noopener">Google’s object detection API</a> in Tensorflow to train a model, which is based on faster-RCNN architecture. It failed, of course, simply because the number of images is too small. Also, I realized the model of faster-RCNN being one hundred more MB, which is quite large, and it is not possible to run on ordinary laptops fast. </p>
 <p>Luckily, Kaggle has hosted <a href="https://www.kaggle.com/c/data-science-bowl-2018" target="_blank" rel="noopener">a competition</a> about cell detections at that moment. From that competition, I met a model architecture, <a href="https://en.wikipedia.org/wiki/U-Net" target="_blank" rel="noopener">U-net</a>. Many teams in that competition successfully used this architecture. Moreover, it’s fast and relatively small, which fitted our users’ needs. Still, three slides were not enough.</p>
 <p>So the first thing was to get enough data. We decided to train a simple CNN model to help us label slides. First, we used watershed and other algorithms to segment cell-like “tiles” from the slides. Then, we used these small images to train a classification CNN model. The model worked well. And we used it to classify the cell-like objects segmented by a watershed algorithm on unlabeled slides. It’s an indirect way to label slides. After that, we just corrected the wrong label, and we could get labeled slides super quickly because the CNN model has labeled many cells. The result like the below. The boxed are the model’s labels, and we used green points to “correct” its labels.</p>
-<p><img src="https://drive.google.com/uc?id=188V0uw_eD-3sx6Y603XivMUstowt6w9b" alt="We corrected CNN&#39;s mistakes" title="We corrected CNN&#39;s mistakes"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/edit_label.jpg" alt="We corrected CNN&#39;s mistakes" title="We corrected CNN&#39;s mistakes"></p>
 <p>After 40 to 50 slides, we began to use U-net as the architecture for our next model. However, U-net can only generate a possibility hot-map and needs hot-maps to train. Remember what the users asked is the count of cells, not a possibility hot map. So the U-net model cannot work alone, and we had to design a pipeline to have other components complementing the U-net model.</p>
 <p>For training, first, we cropped each large slide into small images. Then, we used watershed algorithms to “transform” our previous label as “masks” so that U-net can be trained. When it comes to prediction, we cropped the slide for prediction into small images first; next, we used U-net to generate masks; then, masks were combined into a large mask to match the original slide. Finally, we use watershed and other algorithms to detect the region of cells. Because U-net’s prediction masks will show the interest of regions as white and the background as black, it’s easy for the watershed to separate the cells from this pure background. The final output and its Mask are shown below. Then, we had done it!</p>
-<p><img src="https://drive.google.com/uc?id=1mFYZz77HTRM0LGBbKYvzPms9HwSTUbux" alt="Mask and its final output"></p>
-<p>For more details, look at in <a href="https://github.com/Moo-YewTsing/EOS-Detection" target="_blank" rel="noopener"><strong>Here</strong></a>.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/pred.jpg" alt="Mask and its final output"></p>
+<p>For more details, look at in <a href="https://github.com/KiyoshiMu/EOS-Detection" target="_blank" rel="noopener"><strong>Here</strong></a>.</p>
 <h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p>We randomly sampled 20 well point-labelled images into a test set. By using a different number of training images, we computer how precision, sensitivity and f1_score change as the training image number changes. The “overlap criterion” is defined as an intersection-over-union greater than 0.5.</p>
 <table>
 <thead>
@@ -437,8 +442,8 @@
 </tr>
 </tbody>
 </table>
-<p><img src="https://raw.githubusercontent.com/YewtsingMu/EOS-Detection/master/readme_imgs/12-23_10-19_metric.jpg" alt="Learning Rate" title="Learning rate"></p>
-<h2 id="Better-Solutions-I-know-now"><a href="#Better-Solutions-I-know-now" class="headerlink" title="Better Solutions I know now"></a>Better Solutions I know now</h2><p>Check out this <a href="https://medium.com/datadriveninvestor/detect-eosinophils-on-gcp-5a437ad61a8d" target="_blank" rel="noopener">article</a> I published on Medium.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/metric.jpg" alt="Learning Rate" title="Learning rate"></p>
+<h2 id="Better-Solutions-I-know-now"><a href="#Better-Solutions-I-know-now" class="headerlink" title="Better Solutions I know now"></a>Better Solutions I know now</h2><p>Check out this <a href="https://medium.com/datadriveninvestor/detect-eosinophils-on-gcp-5a437ad61a8d" target="_blank" rel="noopener">article</a> that I published on Medium.</p>
 
         </div>
         <!-- .entry-content -->
@@ -462,7 +467,7 @@
           
             <a href="/2019/03/22/edema/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1GJgdMWxsuv761Tf5Ab_mLn6BHYtCXEe3" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=1GJgdMWxsuv761Tf5Ab_mLn6BHYtCXEe3">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/edema/edema.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/edema/edema.svg">
               </div>
               <span class="label">
               Previous Post</span>
@@ -479,7 +484,7 @@
       
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
@@ -628,7 +633,7 @@ $(document).ready(function() {
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
   </div>
   <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
   <p style="text-align: center; word-spacing: 20px;">

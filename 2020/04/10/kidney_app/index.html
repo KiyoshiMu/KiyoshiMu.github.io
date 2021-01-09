@@ -48,7 +48,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://drive.google.com/uc?id=1Kt0TTVpVVUmIS7tdXUbvLjSIKCT-jPVU,https://drive.google.com/uc?id=1bcI1LW_vEgoYQfs4H1VstL5jKWDEzG4q,https://drive.google.com/uc?id=1PVsC2cd9VWoActLBVA3zba3iUD6v1HRH".split(",");
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert("Hey there, we haven't added support for IE yet~");
@@ -73,7 +73,7 @@
     <div class="focusinfo no-select">
       <!-- <div class="header-tou">
         <a href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
-          <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
         </a>
       </div> -->
       <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
@@ -225,7 +225,7 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/kk/architecture.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/kk/architecture.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -233,7 +233,7 @@
       <p class="entry-census">
         <span>
           <a href="">
-            <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
           </a>
         </span>
         <span>
@@ -264,7 +264,7 @@
 </li>
 </ol>
 <h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p>I chose microservices, a variant of the service-oriented architecture (SOA) structural style, to arrange our Application as a collection of loosely coupled services.</p>
-<p><img src="https://drive.google.com/uc?id=1X-VIh9peh_T0AFxBW2GBW7hBERXQAjV8" alt="System Architecture Design" title="System Architecture Design"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/architecture.png" alt="System Architecture Design" title="System Architecture Design"></p>
 <p>The services include hosting, sending email for doctor verification, doctor confirmation, and patient condition warning. All components interact via their REST API.</p>
 <h3 id="Framework-Angular"><a href="#Framework-Angular" class="headerlink" title="Framework: Angular"></a>Framework: Angular</h3><p>Angular is a platform for building mobile and desktop web applications. It has all the libraries to achieve the functions we need. For example,</p>
 <ol>
@@ -280,22 +280,22 @@
 <p>All content is served over an SSL connection from the closest edge server on Google’s global CDN.</p>
 <h3 id="Database-Firestore"><a href="#Database-Firestore" class="headerlink" title="Database: Firestore"></a>Database: Firestore</h3><p>I leveraged the real-time listeners and offline support provided by Firestore to keep the data in-sync across client Apps. Also, in this way, our App can work regardless of network latency or Internet connectivity. Moreover, after writing data into this database, it can trigger other servers, like “doctor verification”. </p>
 <p>This database is document-oriented. I designed specific schemas for “doctor”, “eGFR”, “user” and “weight” datasets to fit this feature. For example, the schema of eGFR data implemented by Typescript is as follows. Other schemas can be found at <a href="https://github.com/Moo-YewTsing/ngKK/tree/master/src/App/services/models" target="_blank" rel="noopener">Models</a> in our Git Repo.</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="https://drive.google.com/uc?id=1PoFHQj0mKweR1TCJUUGxq_10MyOz5RN-" alt="mobile screens" title="mobile screens"></p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="https://storage.googleapis.com/portport/imgs/kk/small_screens.png" alt="mobile screens" title="mobile screens"></p>
 <p>Here, we show images on mobile screens. The web pages will render differently on a variety of devices and window or screen sizes. Because the images on large screens are, of course, large, we only show the home page on large screens as the following.</p>
-<p><img src="https://drive.google.com/uc?id=1bA_DhDah9A6-ZMP9npXWOaZ2ekO3bwFH" alt="Home Page for Large Screens" title="Home Page for Large Screens"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/home.PNG" alt="Home Page for Large Screens" title="Home Page for Large Screens"></p>
 <p>Our App is responsive, i.e., we made web pages render well on a variety of devices and window or screen sizes. For example, when users view the home page on a large screen, the left-side navigation bar and the charts’ legend appear by default, which is hidden on small screens.</p>
 <h3 id="Service-1-Alert"><a href="#Service-1-Alert" class="headerlink" title="Service-1: Alert"></a>Service-1: Alert</h3><p>Suppose the patient has a verified doctor and enables the notification function of our App, when the eGFR is in the range of ‘Kidney function moderately to severely decreased’, ‘Kidney function severely decreased’ or ‘Kidney failure’. In that case, an HTTP call will be sent from the user’s device to the “Alert” service,  automatically.</p>
 <p>This service will retrieve the recent data from our database and call a third party API from <a href="https://quickchart.io" target="_blank" rel="noopener">QuickChart</a> to create a chart for the data. This service will attach the chart and data in an email and send it to the corresponding doctor.</p>
-<p><img src="https://drive.google.com/uc?id=14XseFU3m-z986yrwH-tCh5ssaRe40MVY" alt="Kidney failure" title="Kidney failure"></p>
-<p><img src="https://drive.google.com/uc?id=1hRcP-w68apX9zhvCCTg0Tlva5RGGCisK" alt="Alert" title="Doctor receive a warning"></p>
-<p><img src="https://drive.google.com/uc?id=1Au55oQzk6ckjRDAFFQGR1fqUyVIVVevy" alt="data" title="Attach the data in an email"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/abnormal.png" alt="Kidney failure" title="Kidney failure"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/risk.png" alt="Alert" title="Doctor receive a warning"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/data.png" alt="data" title="Attach the data in an email"></p>
 <h3 id="Service-2-Doctor-Confirmation"><a href="#Service-2-Doctor-Confirmation" class="headerlink" title="Service-2: Doctor Confirmation"></a>Service-2: Doctor Confirmation</h3><p>Suppose users assign random people as their doctors, without the “Doctor Confirmation” service to let the receivers know they will get Alert emails. In that case, the unlucky people chosen by the bad users may be flooded by alert emails sent from our Alert service.</p>
 <p>Doctor Confirmation will prevent users from abusing our App in this way. When users add their doctors and enable the notification function, the Doctor Confirmation service will send an email to the possible doctor to ask their confirmation. This email includes a link that can send a “POST” call to the Doctor Verification service. Only after the doctor confirm they are willing to get alerting emails for their patients, the alerting emails will be sent to them.</p>
-<p><img src="https://drive.google.com/uc?id=1Ge70IgDeZ18d57l1JRdlP8X3I2eJDcOB" alt="Confirmation" title="Avoid abuse"></p>
-<p><img src="https://drive.google.com/uc?id=1oBntbvlY2enYGrqS-5R4JwOgTEyHOJ-8" alt="Send Doctor Verification" title="A verification email"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/let_know.png" alt="Confirmation" title="Avoid abuse"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/patient_verif.png" alt="Send Doctor Verification" title="A verification email"></p>
 <h3 id="Service-3-Doctor-Verification"><a href="#Service-3-Doctor-Verification" class="headerlink" title="Service-3: Doctor Verification"></a>Service-3: Doctor Verification</h3><p>This service is called from confirmation emails only. When it’s triggered, it will write the “doctorVerified” in patient’s profile as “Ture”, so that when the patient’s eGFR is in dangerous range, an alter email can be sent to the doctor.</p>
-<p><img src="https://drive.google.com/uc?id=1hv2KyIK10sZEHRagkI3w-zRmm1qyO-xl" alt="Doctor Verification" title="Doctors know Verification is done"></p>
-<p><img src="https://drive.google.com/uc?id=1ceh49vUE058YkTeMFH8JGCkdtKwp-Gom" alt="Patient know Verification" title="Patients know Verification is done"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/confirm_v.png" alt="Doctor Verification" title="Doctors know Verification is done"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/kk/know_v.png" alt="Patient know Verification" title="Patients know Verification is done"></p>
 
         </div>
         <!-- .entry-content -->
@@ -319,7 +319,7 @@
           
             <a href="/2021/01/02/pretty_face/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png">
               </div>
               <span class="label">
               Previous Post</span>
@@ -337,7 +337,7 @@
           
             <a href="/2019/12/20/flight/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1v8_qhwvAk7bzqKSIrUH3NCWLevRF_sAb" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=1v8_qhwvAk7bzqKSIrUH3NCWLevRF_sAb">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/flight/flight.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/flight/flight.svg">
               </div>
               <span class="label">
               Next Post</span>
@@ -353,7 +353,7 @@
       
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="" class="profile gravatar"><img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
@@ -502,7 +502,7 @@ $(document).ready(function() {
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
   </div>
   <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
   <p style="text-align: center; word-spacing: 20px;">
