@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kiyoshimu.github.io/"/>
-  <updated>2021-01-07T20:36:22.828Z</updated>
+  <updated>2021-01-09T01:21:53.107Z</updated>
   <id>https://kiyoshimu.github.io/</id>
   
   <author>
@@ -17,15 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Generate Charming Faces From Sketch</title>
+    <link href="https://kiyoshimu.github.io/2021/01/02/pretty_face/"/>
+    <id>https://kiyoshimu.github.io/2021/01/02/pretty_face/</id>
+    <published>2021-01-02T05:00:00.000Z</published>
+    <updated>2021-01-09T01:21:53.107Z</updated>
+    
+    <summary type="html">
+    
+      If I can use segmentation layouts or my sketches as inputs and let the model output **pretty** faces ...
+    
+    </summary>
+    
+      <category term="Whim" scheme="https://kiyoshimu.github.io/categories/Whim/"/>
+    
+    
+      <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+      <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kenny the Kidney: A Mobile Health Application</title>
     <link href="https://kiyoshimu.github.io/2020/04/10/kidney_app/"/>
     <id>https://kiyoshimu.github.io/2020/04/10/kidney_app/</id>
     <published>2020-04-10T04:00:00.000Z</published>
-    <updated>2021-01-07T20:36:22.828Z</updated>
+    <updated>2021-01-09T01:18:15.013Z</updated>
     
     <summary type="html">
     
-      Kenny the Kidney: a mobile health application
+      In one of my graduate course, my team proposed an application that will serve as a central repository for dialysis patients to track more than just their nutritional intake ...
     
     </summary>
     
@@ -45,11 +67,11 @@
     <link href="https://kiyoshimu.github.io/2019/12/20/flight/"/>
     <id>https://kiyoshimu.github.io/2019/12/20/flight/</id>
     <published>2019-12-20T05:00:00.000Z</published>
-    <updated>2021-01-07T20:36:30.086Z</updated>
+    <updated>2021-01-09T01:19:29.426Z</updated>
     
     <summary type="html">
     
-      Avoid Late Flight: A Toy Project
+      You wonder if you can predict whether you will be too late. Then, you can have as many not-too-late conferences as possible, that would be so great!
     
     </summary>
     
@@ -67,11 +89,11 @@
     <link href="https://kiyoshimu.github.io/2019/06/12/survival_analysis/"/>
     <id>https://kiyoshimu.github.io/2019/06/12/survival_analysis/</id>
     <published>2019-06-12T04:00:00.000Z</published>
-    <updated>2021-01-07T20:36:25.438Z</updated>
+    <updated>2021-01-09T01:18:37.741Z</updated>
     
     <summary type="html">
     
-      Survival Analysis by Breast Cancer Slides
+      The application of computer analysis of histological imaging to assist medical diagnosis is very promising ...
     
     </summary>
     
@@ -87,11 +109,11 @@
     <link href="https://kiyoshimu.github.io/2019/03/22/edema/"/>
     <id>https://kiyoshimu.github.io/2019/03/22/edema/</id>
     <published>2019-03-22T04:00:00.000Z</published>
-    <updated>2021-01-07T20:36:35.950Z</updated>
+    <updated>2021-01-09T01:20:34.491Z</updated>
     
     <summary type="html">
     
-      Edema Feature Extraction from MRI
+      We, the researchers in Sun Yat-sen Memorial Hospital started this project to study whether the outputs from MRI CV analysis can help doctors to decide which therapy fits the patients&#39; best interests.
     
     </summary>
     
@@ -109,11 +131,11 @@
     <link href="https://kiyoshimu.github.io/2019/01/18/eos_count/"/>
     <id>https://kiyoshimu.github.io/2019/01/18/eos_count/</id>
     <published>2019-01-18T05:00:00.000Z</published>
-    <updated>2021-01-07T20:36:32.948Z</updated>
+    <updated>2021-01-09T01:20:03.090Z</updated>
     
     <summary type="html">
     
-      Eosinophils Detection
+      It aims to build a framework that could train a model to &quot;learn&quot; to detect any types of cells they want.
     
     </summary>
     

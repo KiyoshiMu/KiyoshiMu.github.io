@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Tag: cv | Portfolio</title>
+  <title itemprop="name">Generate Charming Faces From Sketch | Portfolio</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -219,64 +219,121 @@
   </div>
 </header>
 
-      
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
-<div class="pattern-center ">
-  <div class="pattern-attachment-img">
-    <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="cv.img" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Generate Charming Faces From Sketch</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-1-2<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
   </div>
-  <header class="pattern-header ">
-    <h1 class="cat-title">cv</h1>
-  </header>
-</div>
+
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      
-  <!-- 首页默认取最最新文章集 -->
-  
-    <article class="post post-list" itemscope="" itemtype="https://schema.org/BlogPosting">
-  <div class="post-entry">
-    <div class="feature">
-      <a href="/2021/01/02/pretty_face/">
-        <div class="overlay">
-          <i class="iconfont icon-text">
-          </i>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>A generative adversarial network (GAN) is a class of machine learning frameworks that generate new fake data deceptively from real data. It was invented in just 2014, but its applications have increased rapidly. It has been used successfully in lots of areas, including fashion, art, advertising, and science. </p>
+<p>GANs can be used to achieve image-to-image translation, where the generation of the output image is conditional on an input. And I think it would be interesting if I can use segmentation layouts or my sketches as inputs and let the model output <strong>pretty</strong> faces (Right, the judgment is a matter of taste). Fortunately, one paper, <a href="https://arxiv.org/abs/2008.00951" target="_blank" rel="noopener"><em>Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation</em></a>(<em>Encoding in Style</em>),  published recently pave the road to this imaginary transformation.</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li>How to build a pretty-face dataset</li>
+<li>How to generate face</li>
+<li>How to translate sketch to face</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><h3 id="Use-a-GAN-to-create-a-dataset-for-another-GAN"><a href="#Use-a-GAN-to-create-a-dataset-for-another-GAN" class="headerlink" title="Use a GAN to create a dataset for another GAN"></a>Use a GAN to create a dataset for another GAN</h3><p>The benefit of GANs is that it can provide unlimited data. If I want to create a dataset with pretty-face, why not use a GAN pre-trained on celebrities. Why celebrities? Because it’s heuristic that there are more good-looking people in the group of stars than in the group of ordinary people. Since a GAN learn the distribution of its training data, it masks more sense to select stars as training data. Luckily, when I was searching for a proper dataset, I found <a href="https://github.com/a312863063/" target="_blank" rel="noopener">someone</a> has already trained a <a href="https://arxiv.org/abs/1912.04958" target="_blank" rel="noopener">StyleGAN2</a> on an ideal dataset (95600 512*512 faces from 500 stars from mainland China). </p>
+<p>Since not all the stars in the training dataset have beautiful faces (again, it’s a matter of taste), the images generated by the GAN are not all pretty. A model’s problem can be solved by using another model. Here, I used the model to generate about 3000 images and <strong>manually</strong> selected the images which look <em>not bad</em>. Then I trained a binary classifier using <a href="https://arxiv.org/abs/1907.09595?source=techstories.org" target="_blank" rel="noopener">MixNet-S</a> as the backbone to filter the qualified faces from the GANs’ generation. Next, StyleGAN2 generated another 30,000 images, and the classifier filtered 3318 not-bad images from them. Finally, these images are collected as the dataset for the following training.</p>
+<h3 id="Generate-Sketch-Data"><a href="#Generate-Sketch-Data" class="headerlink" title="Generate Sketch Data"></a>Generate Sketch Data</h3><p>Many studies mentioned how to generate sketch data from original data, especially in the community of GANs for line art coloration. Common methods include using <a href="https://github.com/lllyasviel/sketchKeras" target="_blank" rel="noopener">sketchKeras</a>, <a href="https://esslab.jp/~ess/en/research/sketch_master/" target="_blank" rel="noopener">Sketch Simplification</a> etc. Here, I applied the sketchGAN from Sketch Simplification as the authors of <em>Encoding in Style</em> did to make sketches from the selected faces.</p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The authors of <em>Encoding in Style</em> did a fantastic job of sharing their training procedure. Just follow their simple instructions, and it’s done.</p>
+<h3 id="Plus-Segmentation-Layout"><a href="#Plus-Segmentation-Layout" class="headerlink" title="Plus: Segmentation Layout"></a>Plus: Segmentation Layout</h3><p>I also tried to use segmentation layouts as inputs to generate images. Here another model is created to create images from segmentation maps (also just following their instruction). The faces’ segmentation layouts are created by using <a href="https://github.com/zllrunning/face-parsing.PyTorch" target="_blank" rel="noopener">face-parsing</a></p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><h3 id="Pretty-face-dataset"><a href="#Pretty-face-dataset" class="headerlink" title="Pretty face dataset"></a>Pretty face dataset</h3><ol>
+<li>Faces</li>
+<li>sketches</li>
+<li>segmentation</li>
+</ol>
+<p>The dataset has been publish on <a href="https://www.kaggle.com/yewtsing/pretty-face" target="_blank" rel="noopener">Kaggle</a>.</p>
+<h3 id="sketch-to-faces"><a href="#sketch-to-faces" class="headerlink" title="sketch to faces"></a>sketch to faces</h3><p><img src="https://drive.google.com/uc?id=10sECYLu46QubE-mhUZeLRr8XIwQrw-K_" alt="sketch1" title="without bangs"></p>
+<p><img src="https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09" alt="sketch2" title="with bangs"></p>
+<h3 id="segmentation-to-faces"><a href="#segmentation-to-faces" class="headerlink" title="segmentation to faces"></a>segmentation to faces</h3><p><img src="https://drive.google.com/uc?id=1EDoPqvj4RjSs4r-uNIQBDZC-idErH4Dg" alt="seg1"></p>
+<p><img src="https://drive.google.com/uc?id=12c0xp3oKhNcww5MQk8qH-VFgH6HsbYsC" alt="seg2"></p>
+
         </div>
-        <img width="150" height="150" src="https://drive.google.com/uc?id=1r_QSjPnCOBZq_ITif9wtMPVC9LNcRa09" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
-      </a>
-    </div>
-    <h1 class="entry-title">
-    <a href="/2021/01/02/pretty_face/">
-    Generate Charming Faces From Sketch</a>
-    </h1>
-    <div class="p-time">
-      <i class="iconfont icon-time">
-      </i>
-    2021-1-2</div>
-    <p>
-    If I can use segmentation layouts or my sketches as inputs and let the model output **pretty** faces ...</p>
-    <footer class="entry-footer">
-      <div class="post-more">
-        <a href="/2021/01/02/pretty_face/">
-          <i class="iconfont icon-caidan">
-          </i>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <hr>
-</article>
-  
-
-
-      <div class="clearer">
-      </div>
-    </main>
-    <!--  -->
-    
-  </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/04/10/kidney_app/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://drive.google.com/uc?id=14ndbz3ntjaDWH9l4nSIqy13W31PZrGor">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Kenny the Kidney: A Mobile Health Application</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://drive.google.com/uc?id=12PAwE-BIOJe23BYQIQpATMyR1hN5ecCJ" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -482,7 +539,5 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
-</body>
-</html>e;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
 </body>
 </html>
