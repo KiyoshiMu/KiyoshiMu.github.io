@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kiyoshimu.github.io/"/>
-  <updated>2021-01-09T01:21:53.107Z</updated>
+  <updated>2021-01-09T16:29:03.302Z</updated>
   <id>https://kiyoshimu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://kiyoshimu.github.io/2021/01/02/pretty_face/"/>
     <id>https://kiyoshimu.github.io/2021/01/02/pretty_face/</id>
     <published>2021-01-02T05:00:00.000Z</published>
-    <updated>2021-01-09T01:21:53.107Z</updated>
+    <updated>2021-01-09T16:29:03.302Z</updated>
     
     <summary type="html">
     
@@ -43,22 +43,20 @@
     <link href="https://kiyoshimu.github.io/2020/04/10/kidney_app/"/>
     <id>https://kiyoshimu.github.io/2020/04/10/kidney_app/</id>
     <published>2020-04-10T04:00:00.000Z</published>
-    <updated>2021-01-09T01:18:15.013Z</updated>
+    <updated>2021-01-09T16:54:52.261Z</updated>
     
     <summary type="html">
     
-      In one of my graduate course, my team proposed an application that will serve as a central repository for dialysis patients to track more than just their nutritional intake ...
+      In one of my graduate courses, my team proposed an application that will serve as a central repository for dialysis patients to track more than just their nutritional intake ...
     
     </summary>
     
       <category term="Personal Project" scheme="https://kiyoshimu.github.io/categories/Personal-Project/"/>
     
     
-      <category term="flutter" scheme="https://kiyoshimu.github.io/tags/flutter/"/>
-    
       <category term="firebase" scheme="https://kiyoshimu.github.io/tags/firebase/"/>
     
-      <category term="TS" scheme="https://kiyoshimu.github.io/tags/TS/"/>
+      <category term="angular" scheme="https://kiyoshimu.github.io/tags/angular/"/>
     
   </entry>
   
@@ -67,7 +65,7 @@
     <link href="https://kiyoshimu.github.io/2019/12/20/flight/"/>
     <id>https://kiyoshimu.github.io/2019/12/20/flight/</id>
     <published>2019-12-20T05:00:00.000Z</published>
-    <updated>2021-01-09T01:19:29.426Z</updated>
+    <updated>2021-01-09T16:37:07.318Z</updated>
     
     <summary type="html">
     
@@ -89,7 +87,7 @@
     <link href="https://kiyoshimu.github.io/2019/06/12/survival_analysis/"/>
     <id>https://kiyoshimu.github.io/2019/06/12/survival_analysis/</id>
     <published>2019-06-12T04:00:00.000Z</published>
-    <updated>2021-01-09T01:18:37.741Z</updated>
+    <updated>2021-01-09T16:56:52.981Z</updated>
     
     <summary type="html">
     
@@ -109,7 +107,7 @@
     <link href="https://kiyoshimu.github.io/2019/03/22/edema/"/>
     <id>https://kiyoshimu.github.io/2019/03/22/edema/</id>
     <published>2019-03-22T04:00:00.000Z</published>
-    <updated>2021-01-09T01:20:34.491Z</updated>
+    <updated>2021-01-09T16:34:24.874Z</updated>
     
     <summary type="html">
     
@@ -122,7 +120,7 @@
     
       <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
     
-      <category term="CV" scheme="https://kiyoshimu.github.io/tags/CV/"/>
+      <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
     
   </entry>
   
