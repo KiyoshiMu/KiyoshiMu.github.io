@@ -275,7 +275,7 @@
 <p>For training, first, we cropped each large slide into small images. Then, we used watershed algorithms to “transform” our previous label as “masks” so that U-net can be trained. When it comes to prediction, we cropped the slide for prediction into small images first; next, we used U-net to generate masks; then, masks were combined into a large mask to match the original slide. Finally, we use watershed and other algorithms to detect the region of cells. Because U-net’s prediction masks will show the interest of regions as white and the background as black, it’s easy for the watershed to separate the cells from this pure background. The final output and its Mask are shown below. Then, we had done it!</p>
 <p><img src="https://storage.googleapis.com/portport/imgs/eos/pred.jpg" alt="Mask and its final output"></p>
 <p>For more details, look at in <a href="https://github.com/KiyoshiMu/EOS-Detection" target="_blank" rel="noopener"><strong>Here</strong></a>.</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p>We randomly sampled 20 well point-labelled images into a test set. By using a different number of training images, we computer how precision, sensitivity and f1_score change as the training image number changes. The “overlap criterion” is defined as an intersection-over-union greater than 0.5.</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>We randomly sampled 20 well point-labelled images into a test set. By using a different number of training images, we computer how precision, sensitivity and f1_score change as the training image number changes. The “overlap criterion” is defined as an intersection-over-union greater than 0.5.</p>
 <table>
 <thead>
 <tr>

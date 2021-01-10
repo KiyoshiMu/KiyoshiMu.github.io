@@ -258,9 +258,9 @@
           <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>A generative adversarial network (GAN) is a class of machine learning frameworks that generate new <em>fake</em> data deceptively from real data. It was invented in just 2014, but its applications have increased rapidly. It has also been used successfully in lots of areas, including fashion, art, advertising, and science.</p>
 <p>GANs can be used to achieve image-to-image translation, where the generation of the output image is <strong>conditional</strong> on an input. I think it would be interesting to use segmentation layouts or sketches as inputs to let the model generate <strong>pretty</strong> faces. Right, pretty or not is a matter of taste). Fortunately, I found one paper, <a href="https://arxiv.org/abs/2008.00951" target="_blank" rel="noopener"><em>Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation</em></a>(<em>Encoding in Style</em>), which published recently has paved the road to this imaginary transformation.</p>
 <h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
-<li>How to build a pretty-face dataset</li>
-<li>How to generate face</li>
-<li>How to translate sketch to face</li>
+<li>How to build a pretty-face dataset?</li>
+<li>How to generate face?</li>
+<li>How to translate sketch to face?</li>
 </ol>
 <h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><h3 id="Use-a-GAN-to-create-a-dataset-for-another-GAN"><a href="#Use-a-GAN-to-create-a-dataset-for-another-GAN" class="headerlink" title="Use a GAN to create a dataset for another GAN"></a>Use a GAN to create a dataset for another GAN</h3><p>The benefit of GANs is that it can provide unlimited data. If I want to create a dataset with pretty-face, why not use a GAN pre-trained on celebrities. Why celebrities? Because it’s heuristic that there are more good-looking people in the group of stars than in the group of ordinary people. Since a GAN learn the distribution of its training data, it masks sense to select stars as training data. Luckily, when I was searching for a proper dataset, I found <a href="https://github.com/a312863063/" target="_blank" rel="noopener">someone</a> has already trained a <a href="https://arxiv.org/abs/1912.04958" target="_blank" rel="noopener">StyleGAN2</a> on an ideal dataset that has 95600 512*512 faces from 500 Chinese stars.</p>
 <p>Since not all the stars in the training dataset have beautiful faces, the GAN images are not all pretty. <strong>A model’s problem can be solved using another model.</strong> Here, I used the model to generate about 3000 pictures and <em>manually</em> selected those that look <em>not bad</em>. Using <em>not bad</em> images and the same number of other images, I prepared a dataset to train a binary classifier using <a href="https://arxiv.org/abs/1907.09595?source=techstories.org" target="_blank" rel="noopener">MixNet-S</a> as the backbone. This model can filter qualified faces from the GANs’ products. Next, StyleGAN2 generated another 30,000 images, and the classifier selected 3318 not-bad from them. Finally, these images are collected as the dataset for the following training.</p>
@@ -273,7 +273,7 @@
 <h3 id="Plus-Segmentation-Layout"><a href="#Plus-Segmentation-Layout" class="headerlink" title="Plus: Segmentation Layout"></a>Plus: Segmentation Layout</h3><p>I also tried to use segmentation layouts as inputs to generate images. Here another model is created to create images from segmentation maps (also just following their instruction). The faces’ segmentation layouts are created by using <a href="https://github.com/zllrunning/face-parsing.PyTorch" target="_blank" rel="noopener">face-parsing</a></p>
 <ol>
 <li>Change the settings in <em>pixel2style2pixel/configs/data_configs.py</em></li>
-<li>Use the <a href="https://github.com/eladrich/pixel2style2pixel#segmentation-map-to-face" target="_blank" rel="noopener">command lines</a><h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2></li>
+<li>Use the <a href="https://github.com/eladrich/pixel2style2pixel#segmentation-map-to-face" target="_blank" rel="noopener">command lines</a><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2></li>
 </ol>
 <h3 id="Pretty-face-dataset"><a href="#Pretty-face-dataset" class="headerlink" title="Pretty face dataset"></a>Pretty face dataset</h3><ol>
 <li>Faces</li>
@@ -307,15 +307,15 @@
           
             <div class="post-nepre full next">
           
-            <a href="/2020/04/10/kidney_app/" rel="next">
+            <a href="/2020/12/22/crystal_eye/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/kk/architecture.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/kk/architecture.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                Kenny the Kidney: A Mobile Health Application</h3>
+                Crystal Eyes, an Anime Character Recognition System</h3>
                 <hr>
               </div>
             </a>

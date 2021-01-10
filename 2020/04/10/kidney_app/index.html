@@ -260,7 +260,7 @@
 <h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
 <li><p>How to deliver a full-stack App using only one developer?</p>
 </li>
-<li><p>How to provide Accurate visual display and comprehensible notification concerning eGFR and overall renal function</p>
+<li><p>How to provide Accurate visual display and comprehensible notification concerning eGFR and overall renal function?</p>
 </li>
 </ol>
 <h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p>I chose microservices, a variant of the service-oriented architecture (SOA) structural style, to arrange our Application as a collection of loosely coupled services.</p>
@@ -280,7 +280,7 @@
 <p>All content is served over an SSL connection from the closest edge server on Google’s global CDN.</p>
 <h3 id="Database-Firestore"><a href="#Database-Firestore" class="headerlink" title="Database: Firestore"></a>Database: Firestore</h3><p>I leveraged the real-time listeners and offline support provided by Firestore to keep the data in-sync across client Apps. Also, in this way, our App can work regardless of network latency or Internet connectivity. Moreover, after writing data into this database, it can trigger other servers, like “doctor verification”. </p>
 <p>This database is document-oriented. I designed specific schemas for “doctor”, “eGFR”, “user” and “weight” datasets to fit this feature. For example, the schema of eGFR data implemented by Typescript is as follows. Other schemas can be found at <a href="https://github.com/Moo-YewTsing/ngKK/tree/master/src/App/services/models" target="_blank" rel="noopener">Models</a> in our Git Repo.</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="https://storage.googleapis.com/portport/imgs/kk/small_screens.png" alt="mobile screens" title="mobile screens"></p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p><img src="https://storage.googleapis.com/portport/imgs/kk/small_screens.png" alt="mobile screens" title="mobile screens"></p>
 <p>Here, we show images on mobile screens. The web pages will render differently on a variety of devices and window or screen sizes. Because the images on large screens are, of course, large, we only show the home page on large screens as the following.</p>
 <p><img src="https://storage.googleapis.com/portport/imgs/kk/home.PNG" alt="Home Page for Large Screens" title="Home Page for Large Screens"></p>
 <p>Our App is responsive, i.e., we made web pages render well on a variety of devices and window or screen sizes. For example, when users view the home page on a large screen, the left-side navigation bar and the charts’ legend appear by default, which is hidden on small screens.</p>
@@ -317,15 +317,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2021/01/02/pretty_face/" rel="prev">
+            <a href="/2020/12/22/crystal_eye/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Generate Charming Faces From Sketch</h3>
+                Crystal Eyes, an Anime Character Recognition System</h3>
                 <hr>
               </div>
             </a>

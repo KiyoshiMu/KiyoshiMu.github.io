@@ -259,9 +259,14 @@
 <p>Still, it’s acceptable for someone to be late for <strong>less than 10 minutes</strong>. After all, it’s understandable that as a non-machine, it’s hard to be punctual every time. As a result, you wonder if you can predict whether you will be too late. Then, you can have as many not-too-late conferences as possible, that would be so great!</p>
 <p>This project’s goal is to make this vision become a reality. I built a deep-learning model that can give you a suggestion about whether to cancel a meeting.</p>
 <p>I know you may want to try it first. <a href="https://forms.gle/SYNVKpKsd7vy3qYT6" target="_blank" rel="noopener">Here</a> you go. (If you didn’t receive an email, which means the server on GCP is down to save my money, sorry.)</p>
-<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><p>How to build an infrastructure that can automatically download and clean data monthly?</p>
-<p>How to build a deep-learning model in a cloud environment?</p>
-<p>How to deploy the model as an application?</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li><p>How to build an infrastructure that can automatically download and clean data monthly?</p>
+</li>
+<li><p>How to build a deep-learning model in a cloud environment?</p>
+</li>
+<li><p>How to deploy the model as an application?</p>
+</li>
+</ol>
 <h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p><strong>(Go to <a href="https://github.com/YewtsingMu/airline_demo" target="_blank" rel="noopener">https://github.com/YewtsingMu/airline_demo</a> for a more detailed illustration)</strong></p>
 <p>I used the flight data in 2018 from <a href="https://www.transtats.bts.gov" target="_blank" rel="noopener">Transtats</a>. I leveraged the Google Cloud Platform to complete the tasks below:</p>
 <ol>
