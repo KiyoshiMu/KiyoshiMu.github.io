@@ -6,7 +6,7 @@
   <link href="https://kiyoshimu.github.io/atom.xml" rel="self"/>
   
   <link href="https://kiyoshimu.github.io/"/>
-  <updated>2023-03-18T15:07:51.184Z</updated>
+  <updated>2023-03-18T16:12:44.183Z</updated>
   <id>https://kiyoshimu.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unlocking the Potential of Deep Learning in Pathology Synopses</title>
+    <link href="https://kiyoshimu.github.io/2021/07/25/pathology_synopses/"/>
+    <id>https://kiyoshimu.github.io/2021/07/25/pathology_synopses/</id>
+    <published>2021-07-25T04:00:00.000Z</published>
+    <updated>2023-03-18T16:12:44.183Z</updated>
+    
+    
+    <summary type="html">Use **deep learning + active** learning to extract diagnostically relevant textual information from pathology synopses ...</summary>
+    
+    
+    
+    <category term="Work" scheme="https://kiyoshimu.github.io/categories/Work/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="nlp" scheme="https://kiyoshimu.github.io/tags/nlp/"/>
+    
+  </entry>
   
   <entry>
     <title>Generate Charming Faces From Sketch</title>
@@ -124,7 +145,7 @@
     <link href="https://kiyoshimu.github.io/2019/03/22/edema/"/>
     <id>https://kiyoshimu.github.io/2019/03/22/edema/</id>
     <published>2019-03-22T04:00:00.000Z</published>
-    <updated>2023-03-18T15:07:51.184Z</updated>
+    <updated>2023-03-18T15:39:47.604Z</updated>
     
     
     <summary type="html">We, the researchers in Sun Yat-sen Memorial Hospital started this project to study whether the outputs from MRI CV analysis can help doctors to decide which therapy fits the patients&#39; best interests.</summary>

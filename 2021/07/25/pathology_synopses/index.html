@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Comment | Portfolio</title>
+  <title itemprop="name">Unlocking the Potential of Deep Learning in Pathology Synopses | Portfolio</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -220,65 +220,128 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-    <div class="pattern-center ">
-      <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-      <header class="pattern-header ">
-        <h1 class="entry-title">
-        留言板</h1>
-      </header>
-    </div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      
-<div class="entry-content">
-  <div class="poem-wrap">
-    <div class="poem-border poem-left">
-    </div>
-    <div class="poem-border poem-right">
-    </div>
-    <h1>
-    念两句诗</h1>
-    <p id="poem">
-    叙别梦、扬州一觉。</p>
-    <p id="info">
-    【宋代】吴文英《夜游宫·人去西楼雁杳》</p>
-  </div>
-</div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
-      <!-- .entry-content -->
-      
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
-        <div class="post-tags">
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig5_HTML.png?as=webp);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig5_HTML.png?as=webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Unlocking the Potential of Deep Learning in Pathology Synopses</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig5_HTML.png?as=webp">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-7-25<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>Original paper: <a target="_blank" rel="noopener" href="https://www.nature.com/articles/s43856-021-00008-0">A BERT model generates diagnostically relevant semantic embeddings from pathology synopses with active learning</a></p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Pathology synopses are a crucial aspect of the diagnostic process. They involve experts observing human tissue and summarizing their findings in semi-structured or unstructured text. These synopses are critical in helping physicians make accurate diagnoses and develop appropriate treatment plans. However, the limited number of specialists available to interpret pathology synopses can be a significant barrier to accessing this essential information. Fortunately, deep learning offers a solution to this problem.</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li><p>How to build the pathology synopses dataset, as only limited number of experts can interpret these synopses?</p>
+</li>
+<li><p>How to <em>extract</em> info from pathology synopses, which are complex, and require a high degree of domain-specific knowledge to interpret.</p>
+</li>
+</ol>
+<h2 id="Solutions-Applied"><a href="#Solutions-Applied" class="headerlink" title="Solutions Applied"></a>Solutions Applied</h2><p>The overall modeling process:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig1_HTML.png?as=webp" alt="modeling process" title="Generation of semantic labels for bone marrow aspirate synopses and modeling process"></p>
+<h3 id="Active-learning-for-pathology-synopses-dataset"><a href="#Active-learning-for-pathology-synopses-dataset" class="headerlink" title="Active learning for pathology synopses dataset"></a>Active learning for pathology synopses dataset</h3><p>We used an <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Active_learning_(machine_learning)">active learning</a> approach was used to develop a set of semantic labels for bone marrow aspirate pathology synopses.</p>
+<p>In active learning, the machine learning model is not just trained on a fixed dataset, but it is also allowed to query a human expert for labels for selected examples. Here, we start with a small set of labeled examples. These labeled examples would be used to train a machine learning model to map the pathology synopses to semantic labels. The model would then be used to generate predictions for a larger set of unlabeled examples.</p>
+<p>Rather than simply accepting the model’s predictions, the active learning approach selected a subset of the unlabeled examples that the model is least certain about and present them to a human expert for labeling. By doing this, the machine learning model can learn from the expert’s input and improve its accuracy over time.</p>
+<p>This process is repeated iteratively, with the machine learning model being updated with the newly labeled examples, and the model making new predictions on the remaining unlabeled examples. This approach significantly reduced the number of labeled examples required to develop an accurate set of semantic labels for pathology synopses, which is essential as it can be time-consuming and expensive to obtain large amounts of labeled data.</p>
+<p>The active learning process and its result:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig2_HTML.png?as=webp" alt="active learning process" title="The active learning process and its result"></p>
+<h3 id="Transformer-for-pathology-synopses"><a href="#Transformer-for-pathology-synopses" class="headerlink" title="Transformer for pathology synopses"></a>Transformer for pathology synopses</h3><p>A transformer-based deep-learning model (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/BERT_(language_model)">BERT</a>) was then trained to map these synopses to one or more semantic labels and to extract learned embeddings from the model’s hidden layer.</p>
+<p>BERT (Bidirectional Encoder Representations from Transformers) is a state-of-the-art natural language processing (NLP) model that can generate meaningful embeddings from unstructured texts. BERT is based on a self-attention mechanism that allows it to process input sequences in a way that captures the relationships between all of the input tokens. When BERT processes a pathology synopsis, it generates a sequence of hidden states that capture the meaning of each token in the input. These hidden states are then used to generate a fixed-length vector, called an embedding, that represents the meaning of the entire input sequence.</p>
+<p>The key advantage of BERT over traditional NLP models is that it is pre-trained on large amounts of text data using a masked language modeling task. This pre-training allows BERT to learn general language representations that can be fine-tuned for a specific task, such as mapping pathology synopses to semantic labels.</p>
+<p>To generate meaningful embeddings from unstructured pathology synopses, BERT is fine-tuned on the labeled dataset of pathology synopses created by <em>active learning</em>. During fine-tuning, the model learns to map the unstructured text input to the correct semantic labels by adjusting the weights of its neural network based on the labeled examples.</p>
+<p>The learned embeddings generated by BERT capture the semantic meaning of the input sequence in a way that is useful for downstream tasks such as diagnostic classification. By leveraging the power of deep learning and pre-training, BERT can generate embeddings that capture the subtle nuances and context-specific information present in pathology synopses, ultimately leading to more accurate diagnoses and improved patient outcomes.</p>
+<p>Model performance in embedding extraction:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig3_HTML.png?as=webp" alt="synopsis embeddings" title="2D projection of synopsis embeddings"></p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>The results of the study demonstrated that with a small amount of training data, the transformer-based natural language model was able to extract embeddings from pathology synopses that captured diagnostically relevant information. On average, these embeddings could be used to generate semantic labels mapping patients to probable diagnostic groups with a micro-average F1 score of 0.779 ± 0.025.</p>
+<p>Pathology synopses play a critical role in the diagnostic process, and their interpretation requires a high degree of domain-specific knowledge. The success of this study provides a generalizable deep learning model and approach that can unlock the semantic information inherent in pathology synopses. By using transformer-based deep-learning models to extract meaningful embeddings from pathology synopses, we can unlock the semantic information inherent in these synopses and improve the accuracy and speed of diagnoses.</p>
+<p>Model performance in label prediction:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig4_HTML.png?as=webp" alt="Model performance in label prediction" title="The mean F1 scores and the standard deviation computed across four validation experiments"></p>
+<p>Co-occurrence of the predicted labels:</p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig5_HTML.png?as=webp" alt="Co-occurrence of the predicted labels" title="The chord diagram of the model predicted labels among 1000 samples"></p>
+
         </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
       <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2021/01/02/pretty_face/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Generate Charming Faces From Sketch</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="A place where my traces stay" height="70" width="70"></a>
+          <a href="" class="profile gravatar"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs43856-021-00008-0/MediaObjects/43856_2021_8_Fig5_HTML.png?as=webp" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a target="_blank" href="https://github.com/KiyoshiMu/KiyoshiMu.github.io" itemprop="url" rel="author noopener">A place where my traces stay</a>
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>Flowers may blossom twice, but no one will be young again.</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
