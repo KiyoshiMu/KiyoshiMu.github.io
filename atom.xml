@@ -6,7 +6,7 @@
   <link href="https://kiyoshimu.github.io/atom.xml" rel="self"/>
   
   <link href="https://kiyoshimu.github.io/"/>
-  <updated>2023-03-18T16:12:44.183Z</updated>
+  <updated>2023-03-18T17:24:05.928Z</updated>
   <id>https://kiyoshimu.github.io/</id>
   
   <author>
@@ -17,14 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Automated Bone Marrow Cytology Using Deep Learning</title>
+    <link href="https://kiyoshimu.github.io/2022/06/17/automated-bone-marrow-cytology/"/>
+    <id>https://kiyoshimu.github.io/2022/06/17/automated-bone-marrow-cytology/</id>
+    <published>2022-06-17T04:00:00.000Z</published>
+    <updated>2023-03-18T17:24:05.928Z</updated>
+    
+    
+    <summary type="html">A new automate pipeline to understand complex information generated in bone marrow cytology ...</summary>
+    
+    
+    
+    <category term="Work" scheme="https://kiyoshimu.github.io/categories/Work/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Unlocking the Potential of Deep Learning in Pathology Synopses</title>
     <link href="https://kiyoshimu.github.io/2021/07/25/pathology_synopses/"/>
     <id>https://kiyoshimu.github.io/2021/07/25/pathology_synopses/</id>
     <published>2021-07-25T04:00:00.000Z</published>
-    <updated>2023-03-18T16:12:44.183Z</updated>
+    <updated>2023-03-18T17:21:37.057Z</updated>
     
     
-    <summary type="html">Use **deep learning + active** learning to extract diagnostically relevant textual information from pathology synopses ...</summary>
+    <summary type="html">Use `deep learning + active` learning to extract diagnostically relevant textual information from pathology synopses ...</summary>
     
     
     
@@ -42,10 +63,10 @@
     <link href="https://kiyoshimu.github.io/2021/01/02/pretty_face/"/>
     <id>https://kiyoshimu.github.io/2021/01/02/pretty_face/</id>
     <published>2021-01-02T05:00:00.000Z</published>
-    <updated>2023-03-18T15:07:51.184Z</updated>
+    <updated>2023-03-18T17:22:29.107Z</updated>
     
     
-    <summary type="html">If I can use segmentation layouts or my sketches as inputs and let the model output **pretty** faces ...</summary>
+    <summary type="html">If I can use segmentation layouts or my sketches as inputs and let the model output `pretty` faces ...</summary>
     
     
     
@@ -63,10 +84,10 @@
     <link href="https://kiyoshimu.github.io/2020/12/22/crystal_eye/"/>
     <id>https://kiyoshimu.github.io/2020/12/22/crystal_eye/</id>
     <published>2020-12-22T05:00:00.000Z</published>
-    <updated>2023-03-18T15:07:51.184Z</updated>
+    <updated>2023-03-18T17:20:54.411Z</updated>
     
     
-    <summary type="html">To our knowledge, Crystal Eyes is the first system that can recognize more than *1500* (1551) 2D characters with high performance using machine learning. </summary>
+    <summary type="html">To our knowledge, Crystal Eyes is the first system that can recognize more than 1500 (1551) 2D characters with high performance using machine learning. </summary>
     
     
     
