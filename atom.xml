@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Portfolio</title>
+  
+  <subtitle>From WHIM to REALITY</subtitle>
+  <link href="https://kiyoshimu.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://kiyoshimu.github.io/"/>
+  <updated>2023-03-18T15:07:51.184Z</updated>
+  <id>https://kiyoshimu.github.io/</id>
+  
+  <author>
+    <name>Kiyoshi Mu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Generate Charming Faces From Sketch</title>
+    <link href="https://kiyoshimu.github.io/2021/01/02/pretty_face/"/>
+    <id>https://kiyoshimu.github.io/2021/01/02/pretty_face/</id>
+    <published>2021-01-02T05:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">If I can use segmentation layouts or my sketches as inputs and let the model output **pretty** faces ...</summary>
+    
+    
+    
+    <category term="Whim" scheme="https://kiyoshimu.github.io/categories/Whim/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Crystal Eyes, an Anime Character Recognition System</title>
+    <link href="https://kiyoshimu.github.io/2020/12/22/crystal_eye/"/>
+    <id>https://kiyoshimu.github.io/2020/12/22/crystal_eye/</id>
+    <published>2020-12-22T05:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">To our knowledge, Crystal Eyes is the first system that can recognize more than *1500* (1551) 2D characters with high performance using machine learning. </summary>
+    
+    
+    
+    <category term="Whim" scheme="https://kiyoshimu.github.io/categories/Whim/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kenny the Kidney: A Mobile Health Application</title>
+    <link href="https://kiyoshimu.github.io/2020/04/10/kidney_app/"/>
+    <id>https://kiyoshimu.github.io/2020/04/10/kidney_app/</id>
+    <published>2020-04-10T04:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">In one of my graduate courses, my team proposed an application that will serve as a central repository for dialysis patients to track more than just their nutritional intake ...</summary>
+    
+    
+    
+    <category term="Personal Project" scheme="https://kiyoshimu.github.io/categories/Personal-Project/"/>
+    
+    
+    <category term="firebase" scheme="https://kiyoshimu.github.io/tags/firebase/"/>
+    
+    <category term="angular" scheme="https://kiyoshimu.github.io/tags/angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Avoid Late Flight: A Toy Project</title>
+    <link href="https://kiyoshimu.github.io/2019/12/20/flight/"/>
+    <id>https://kiyoshimu.github.io/2019/12/20/flight/</id>
+    <published>2019-12-20T05:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">You wonder if you can predict whether you will be too late. Then, you can have as many not-too-late conferences as possible, that would be so great!</summary>
+    
+    
+    
+    <category term="Personal Project" scheme="https://kiyoshimu.github.io/categories/Personal-Project/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="gcp" scheme="https://kiyoshimu.github.io/tags/gcp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Survival Analysis by Breast Cancer Slides</title>
+    <link href="https://kiyoshimu.github.io/2019/06/12/survival_analysis/"/>
+    <id>https://kiyoshimu.github.io/2019/06/12/survival_analysis/</id>
+    <published>2019-06-12T04:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">The application of computer analysis of histological imaging to assist medical diagnosis is very promising ...</summary>
+    
+    
+    
+    <category term="Work" scheme="https://kiyoshimu.github.io/categories/Work/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Edema Feature Extraction From MRI</title>
+    <link href="https://kiyoshimu.github.io/2019/03/22/edema/"/>
+    <id>https://kiyoshimu.github.io/2019/03/22/edema/</id>
+    <published>2019-03-22T04:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">We, the researchers in Sun Yat-sen Memorial Hospital started this project to study whether the outputs from MRI CV analysis can help doctors to decide which therapy fits the patients&#39; best interests.</summary>
+    
+    
+    
+    <category term="Work" scheme="https://kiyoshimu.github.io/categories/Work/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="cv" scheme="https://kiyoshimu.github.io/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Eosinophils Detection</title>
+    <link href="https://kiyoshimu.github.io/2019/01/18/eos_count/"/>
+    <id>https://kiyoshimu.github.io/2019/01/18/eos_count/</id>
+    <published>2019-01-18T05:00:00.000Z</published>
+    <updated>2023-03-18T15:07:51.184Z</updated>
+    
+    
+    <summary type="html">It aims to build a framework that could train a model to &quot;learn&quot; to detect any types of cells they want.</summary>
+    
+    
+    
+    <category term="Work" scheme="https://kiyoshimu.github.io/categories/Work/"/>
+    
+    
+    <category term="ml" scheme="https://kiyoshimu.github.io/tags/ml/"/>
+    
+    <category term="gcp" scheme="https://kiyoshimu.github.io/tags/gcp/"/>
+    
+  </entry>
+  
+</feed>

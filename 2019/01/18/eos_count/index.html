@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Eosinophils Detection | Portfolio</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "A place where my traces stay";
+  mashiro_option.author_name = "A place where my traces stay";
+  mashiro_option.site_url = "https://github.com/KiyoshiMu/KiyoshiMu.github.io";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert("Hey there, we haven't added support for IE yet~");
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Portfolio" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <!-- <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+        </a>
+      </div> -->
+      <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
+      <div class="header-info">
+        <p>Flowers may blossom twice, but no one will be young again.</p>
+        <div class="top-social_v2">
+          <li id="bg-pre" style="cursor: pointer">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/KiyoshiMu" target="_blank" class="social-github" title="github">
+                    <img src="/images/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" class="social-github" title="linkedin">
+                    <img src="/images/linkedin.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next" style="cursor: pointer">
+
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <!-- <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div> -->
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">A place where my traces stay</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    Home
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    Category
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Work/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          Work
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Personal-Project/">
+                          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                          Personal Project
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Whim/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Whim
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    About
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/eos/eosinophil.svg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/eos/eosinophil.svg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Eosinophils Detection</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-1-18<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This project was set up by Data and Computer Science department, Sun Yat-sen University, and Sun Yat-sen Memorial Hospital. It aims to build a framework that could train a model to “learn” to detect any types of cells they want. And the first type they chose is the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Eosinophil"><em>Eosinophils</em></a>(EOS) , which is vital in clinical testing and somewhat easy to be recognized.</p>
+<p>Two other medical students and I were invited to try the water. The model was supposed to be used in personal computers, especially laptops. We started with three labeled slides. On each of the slides, there are about 100 - 200 <em>Eosinophils</em>. The figure below is an example.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/label.jpg" alt="Our starting point" title="Our starting point"></p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li><p>How to train a model that can detect <em>Eosinophils</em> in a “<em>reasonable correctness</em>“ (academic study sometimes starts with an ambiguous aim)?</p>
+</li>
+<li><p>How to make this model run on laptops?</p>
+</li>
+<li><p>How to used limited resources for labeling to generate the most labels?</p>
+</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p><img src="https://storage.googleapis.com/portport/imgs/eos/eos_solution.png" alt="Solutions" title="Solutions I applied"></p>
+<p>First, I tried to use <a target="_blank" rel="noopener" href="https://github.com/tensorflow/models/tree/master/research/object_detection">Google’s object detection API</a> in Tensorflow to train a model, which is based on faster-RCNN architecture. It failed, of course, simply because the number of images is too small. Also, I realized the model of faster-RCNN being one hundred more MB, which is quite large, and it is not possible to run on ordinary laptops fast. </p>
+<p>Luckily, Kaggle has hosted <a target="_blank" rel="noopener" href="https://www.kaggle.com/c/data-science-bowl-2018">a competition</a> about cell detections at that moment. From that competition, I met a model architecture, <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/U-Net">U-net</a>. Many teams in that competition successfully used this architecture. Moreover, it’s fast and relatively small, which fitted our users’ needs. Still, three slides were not enough.</p>
+<p>So the first thing was to get enough data. We decided to train a simple CNN model to help us label slides. First, we used watershed and other algorithms to segment cell-like “tiles” from the slides. Then, we used these small images to train a classification CNN model. The model worked well. And we used it to classify the cell-like objects segmented by a watershed algorithm on unlabeled slides. It’s an indirect way to label slides. After that, we just corrected the wrong label, and we could get labeled slides super quickly because the CNN model has labeled many cells. The result like the below. The boxed are the model’s labels, and we used green points to “correct” its labels.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/edit_label.jpg" alt="We corrected CNN&#39;s mistakes" title="We corrected CNN&#39;s mistakes"></p>
+<p>After 40 to 50 slides, we began to use U-net as the architecture for our next model. However, U-net can only generate a possibility hot-map and needs hot-maps to train. Remember what the users asked is the count of cells, not a possibility hot map. So the U-net model cannot work alone, and we had to design a pipeline to have other components complementing the U-net model.</p>
+<p>For training, first, we cropped each large slide into small images. Then, we used watershed algorithms to “transform” our previous label as “masks” so that U-net can be trained. When it comes to prediction, we cropped the slide for prediction into small images first; next, we used U-net to generate masks; then, masks were combined into a large mask to match the original slide. Finally, we use watershed and other algorithms to detect the region of cells. Because U-net’s prediction masks will show the interest of regions as white and the background as black, it’s easy for the watershed to separate the cells from this pure background. The final output and its Mask are shown below. Then, we had done it!</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/pred.jpg" alt="Mask and its final output"></p>
+<p>For more details, look at in <a target="_blank" rel="noopener" href="https://github.com/KiyoshiMu/EOS-Detection"><strong>Here</strong></a>.</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>We randomly sampled 20 well point-labelled images into a test set. By using a different number of training images, we computer how precision, sensitivity and f1_score change as the training image number changes. The “overlap criterion” is defined as an intersection-over-union greater than 0.5.</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="right">true_positive</th>
+<th align="right">false_positive</th>
+<th align="right">false_negative</th>
+<th align="right">precision</th>
+<th align="right">sensitivity</th>
+<th align="right">f1_score</th>
+<th align="right">training image number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0</td>
+<td align="right">1089</td>
+<td align="right">837</td>
+<td align="right">349</td>
+<td align="right">0.565421</td>
+<td align="right">0.757302</td>
+<td align="right">0.647444</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">1116</td>
+<td align="right">462</td>
+<td align="right">322</td>
+<td align="right">0.707224</td>
+<td align="right">0.776078</td>
+<td align="right">0.740053</td>
+<td align="right">15</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">1044</td>
+<td align="right">349</td>
+<td align="right">394</td>
+<td align="right">0.749462</td>
+<td align="right">0.726008</td>
+<td align="right">0.737549</td>
+<td align="right">20</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">1115</td>
+<td align="right">600</td>
+<td align="right">323</td>
+<td align="right">0.650146</td>
+<td align="right">0.775382</td>
+<td align="right">0.707263</td>
+<td align="right">25</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">1079</td>
+<td align="right">327</td>
+<td align="right">359</td>
+<td align="right">0.767425</td>
+<td align="right">0.750348</td>
+<td align="right">0.75879</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1157</td>
+<td align="right">491</td>
+<td align="right">281</td>
+<td align="right">0.702063</td>
+<td align="right">0.80459</td>
+<td align="right">0.749838</td>
+<td align="right">35</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">1113</td>
+<td align="right">357</td>
+<td align="right">325</td>
+<td align="right">0.757143</td>
+<td align="right">0.773992</td>
+<td align="right">0.765475</td>
+<td align="right">40</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">1072</td>
+<td align="right">343</td>
+<td align="right">366</td>
+<td align="right">0.757597</td>
+<td align="right">0.74548</td>
+<td align="right">0.75149</td>
+<td align="right">45</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">1138</td>
+<td align="right">429</td>
+<td align="right">300</td>
+<td align="right">0.726228</td>
+<td align="right">0.791377</td>
+<td align="right">0.757404</td>
+<td align="right">50</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">969</td>
+<td align="right">236</td>
+<td align="right">469</td>
+<td align="right">0.804149</td>
+<td align="right">0.673853</td>
+<td align="right">0.733258</td>
+<td align="right">55</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="right">1134</td>
+<td align="right">380</td>
+<td align="right">304</td>
+<td align="right">0.749009</td>
+<td align="right">0.788595</td>
+<td align="right">0.768293</td>
+<td align="right">60</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="right">1101</td>
+<td align="right">326</td>
+<td align="right">337</td>
+<td align="right">0.771549</td>
+<td align="right">0.765647</td>
+<td align="right">0.768586</td>
+<td align="right">65</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">1012</td>
+<td align="right">255</td>
+<td align="right">426</td>
+<td align="right">0.798737</td>
+<td align="right">0.703755</td>
+<td align="right">0.748244</td>
+<td align="right">70</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="right">1049</td>
+<td align="right">295</td>
+<td align="right">389</td>
+<td align="right">0.780506</td>
+<td align="right">0.729485</td>
+<td align="right">0.754134</td>
+<td align="right">75</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="right">1036</td>
+<td align="right">242</td>
+<td align="right">402</td>
+<td align="right">0.810642</td>
+<td align="right">0.720445</td>
+<td align="right">0.762887</td>
+<td align="right">78</td>
+</tr>
+</tbody></table>
+<p><img src="https://storage.googleapis.com/portport/imgs/eos/metric.jpg" alt="Learning Rate" title="Learning rate"></p>
+<h2 id="Better-Solutions-I-know-now"><a href="#Better-Solutions-I-know-now" class="headerlink" title="Better Solutions I know now"></a>Better Solutions I know now</h2><p>Check out this <a target="_blank" rel="noopener" href="https://medium.com/datadriveninvestor/detect-eosinophils-on-gcp-5a437ad61a8d">article</a> that I published on Medium.</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre full previous">
+          
+            <a href="/2019/03/22/edema/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/edema/edema.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/edema/edema.svg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Edema Feature Extraction From MRI</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Kiyoshi Mu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Kiyoshi</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+  </div>
+  <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/KiyoshiMu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://www.linkedin.com/in/yewtsing-moo/" class="fa fa-linkedin" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            Home
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            Category
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Work/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  Work
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Personal-Project/">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  Personal Project
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Whim/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Whim
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            About
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</body>
+</html>

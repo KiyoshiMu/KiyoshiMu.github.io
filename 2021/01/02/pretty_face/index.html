@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Generate Charming Faces From Sketch | Portfolio</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "A place where my traces stay";
+  mashiro_option.author_name = "A place where my traces stay";
+  mashiro_option.site_url = "https://github.com/KiyoshiMu/KiyoshiMu.github.io";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert("Hey there, we haven't added support for IE yet~");
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Portfolio" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <!-- <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+        </a>
+      </div> -->
+      <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
+      <div class="header-info">
+        <p>Flowers may blossom twice, but no one will be young again.</p>
+        <div class="top-social_v2">
+          <li id="bg-pre" style="cursor: pointer">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/KiyoshiMu" target="_blank" class="social-github" title="github">
+                    <img src="/images/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" class="social-github" title="linkedin">
+                    <img src="/images/linkedin.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next" style="cursor: pointer">
+
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <!-- <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div> -->
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">A place where my traces stay</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    Home
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    Category
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Work/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          Work
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Personal-Project/">
+                          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                          Personal Project
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Whim/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Whim
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    About
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Generate Charming Faces From Sketch</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-1-2<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>A generative adversarial network (GAN) is a class of machine learning frameworks that generate new <em>fake</em> data deceptively from real data. It was invented in just 2014, but its applications have increased rapidly. It has also been used successfully in lots of areas, including fashion, art, advertising, and science.</p>
+<p>GANs can be used to achieve image-to-image translation, where the generation of the output image is <strong>conditional</strong> on an input. I think it would be interesting to use segmentation layouts or sketches as inputs to let the model generate <strong>pretty</strong> faces. Right, pretty or not is a matter of taste). Fortunately, I found one paper, <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2008.00951"><em>Encoding in Style: a StyleGAN Encoder for Image-to-Image Translation</em></a>(<em>Encoding in Style</em>), which published recently has paved the road to this imaginary transformation.</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li>How to build a pretty-face dataset?</li>
+<li>How to generate face?</li>
+<li>How to translate sketch to face?</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><h3 id="Use-a-GAN-to-create-a-dataset-for-another-GAN"><a href="#Use-a-GAN-to-create-a-dataset-for-another-GAN" class="headerlink" title="Use a GAN to create a dataset for another GAN"></a>Use a GAN to create a dataset for another GAN</h3><p>The benefit of GANs is that it can provide unlimited data. If I want to create a dataset with pretty-face, why not use a GAN pre-trained on celebrities. Why celebrities? Because it’s heuristic that there are more good-looking people in the group of stars than in the group of ordinary people. Since a GAN learn the distribution of its training data, it masks sense to select stars as training data. Luckily, when I was searching for a proper dataset, I found <a target="_blank" rel="noopener" href="https://github.com/a312863063/">someone</a> has already trained a <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1912.04958">StyleGAN2</a> on an ideal dataset that has 95600 512*512 faces from 500 Chinese stars.</p>
+<p>Since not all the stars in the training dataset have beautiful faces, the GAN images are not all pretty. <strong>A model’s problem can be solved using another model.</strong> Here, I used the model to generate about 3000 pictures and <em>manually</em> selected those that look <em>not bad</em>. Using <em>not bad</em> images and the same number of other images, I prepared a dataset to train a binary classifier using <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1907.09595?source=techstories.org">MixNet-S</a> as the backbone. This model can filter qualified faces from the GANs’ products. Next, StyleGAN2 generated another 30,000 images, and the classifier selected 3318 not-bad from them. Finally, these images are collected as the dataset for the following training.</p>
+<h3 id="Generate-Sketch-Data"><a href="#Generate-Sketch-Data" class="headerlink" title="Generate Sketch Data"></a>Generate Sketch Data</h3><p>Many studies mentioned how to generate sketch data from original data, especially in the community of GANs for line art coloration. Common methods include using <a target="_blank" rel="noopener" href="https://github.com/lllyasviel/sketchKeras">sketchKeras</a>, <a target="_blank" rel="noopener" href="https://esslab.jp/~ess/en/research/sketch_master/">Sketch Simplification</a> etc. Here, I applied the sketchGAN from Sketch Simplification as the authors of <em>Encoding in Style</em> did to make sketches from the selected faces.</p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The authors of <em>Encoding in Style</em> did a fantastic job of sharing their training procedure. Just follow their simple instructions, and it’s done.</p>
+<ol>
+<li>Change the settings in <em>pixel2style2pixel&#x2F;configs&#x2F;data_configs.py</em></li>
+<li>Use the <a target="_blank" rel="noopener" href="https://github.com/eladrich/pixel2style2pixel#sketch-to-face">command lines</a></li>
+</ol>
+<h3 id="Plus-Segmentation-Layout"><a href="#Plus-Segmentation-Layout" class="headerlink" title="Plus: Segmentation Layout"></a>Plus: Segmentation Layout</h3><p>I also tried to use segmentation layouts as inputs to generate images. Here another model is created to create images from segmentation maps (also just following their instruction). The faces’ segmentation layouts are created by using <a target="_blank" rel="noopener" href="https://github.com/zllrunning/face-parsing.PyTorch">face-parsing</a></p>
+<ol>
+<li>Change the settings in <em>pixel2style2pixel&#x2F;configs&#x2F;data_configs.py</em></li>
+<li>Use the <a target="_blank" rel="noopener" href="https://github.com/eladrich/pixel2style2pixel#segmentation-map-to-face">command lines</a></li>
+</ol>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Pretty-face-dataset"><a href="#Pretty-face-dataset" class="headerlink" title="Pretty face dataset"></a>Pretty face dataset</h3><ol>
+<li>Faces</li>
+<li>sketches</li>
+<li>segmentation</li>
+</ol>
+<p>The dataset has been published on <a target="_blank" rel="noopener" href="https://www.kaggle.com/yewtsing/pretty-face">Kaggle</a>.</p>
+<h3 id="sketch-to-faces"><a href="#sketch-to-faces" class="headerlink" title="sketch to faces"></a>sketch to faces</h3><p><img src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch1.png" alt="sketch1" title="without bangs"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png" alt="sketch2" title="with bangs"></p>
+<h3 id="segmentation-to-faces"><a href="#segmentation-to-faces" class="headerlink" title="segmentation to faces"></a>segmentation to faces</h3><p><img src="https://storage.googleapis.com/portport/imgs/pretty_face/seg1.png" alt="seg1"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/pretty_face/seg2.png" alt="seg2"></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/12/22/crystal_eye/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Crystal Eyes, an Anime Character Recognition System</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Kiyoshi Mu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Kiyoshi</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+  </div>
+  <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/KiyoshiMu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://www.linkedin.com/in/yewtsing-moo/" class="fa fa-linkedin" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            Home
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            Category
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Work/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  Work
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Personal-Project/">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  Personal Project
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Whim/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Whim
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            About
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</body>
+</html>

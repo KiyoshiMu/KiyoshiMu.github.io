@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Crystal Eyes, an Anime Character Recognition System | Portfolio</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "A place where my traces stay";
+  mashiro_option.author_name = "A place where my traces stay";
+  mashiro_option.site_url = "https://github.com/KiyoshiMu/KiyoshiMu.github.io";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert("Hey there, we haven't added support for IE yet~");
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Portfolio" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <!-- <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+        </a>
+      </div> -->
+      <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
+      <div class="header-info">
+        <p>Flowers may blossom twice, but no one will be young again.</p>
+        <div class="top-social_v2">
+          <li id="bg-pre" style="cursor: pointer">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/KiyoshiMu" target="_blank" class="social-github" title="github">
+                    <img src="/images/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" class="social-github" title="linkedin">
+                    <img src="/images/linkedin.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next" style="cursor: pointer">
+
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <!-- <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div> -->
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">A place where my traces stay</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    Home
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    Category
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Work/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          Work
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Personal-Project/">
+                          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                          Personal Project
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Whim/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Whim
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    About
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Crystal Eyes, an Anime Character Recognition System</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-12-22<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>It would be cool to find a 2D character’s source anime by using her&#x2F;his images. Some platforms may use this system to help users find animes. Others may use it to check whether one’s newly created character already has his&#x2F;her debut, i.e., the new character is not original enough.</p>
+<p>One solution is to rely on Google Image’s <em>Image Search</em>, also called <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Reverse_image_search">reverse image search</a>, which can find similar images and their sources indexed by Google. However, it fails to provide the right source when the input image is an original one.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/colorG.png" alt="original fail"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/lineG.png" alt="line fail"></p>
+<p>It’s due to the nature of its encoding and indexing method. First, when Google makes embeddings (vectors) for images to find their similar counterparts, I think they will use a <em>general</em> algorithm that fits typical pictures’ traits. However, anime pictures and sketches don’t belong to this group. Thus, this kind of image embeddings doesn’t have the necessary information to represent their semantics. Second, thanks to the emphasis on speed, Google will not use a machine learning model to predict one image’s identity from the embedding. Instead, to the best, they will use distance rules to find other images whose embeddings are close to the input’s embedding. A typical software using distance is Facebook’s <a target="_blank" rel="noopener" href="https://github.com/facebookresearch/faiss">faiss</a>. This system has excellent speed performance. However, because it relies on distance computations, such as L2 distance or cos distance, the manipulation it can conduct on the embeddings is limited, which results in a sub-optimal search result. Or, if they think the distance system will still hurt the performance, they would simply use input metadata to match other images.</p>
+<p>To better meet the demand, we need to make a system that <strong>specialized to encode anime characters’ head images</strong> and uses <strong>machines learning to predict the classes</strong>. We use heads instead of the full images because, in this way, we can improve its generalization and performance. The background and cloth information is indeed essential to identify a character. However, in our application, the input may only have head information. It’s critical to let the model’s training data match the future inputs as close as possible to reduce the <a target="_blank" rel="noopener" href="https://cloud.google.com/automl-tables/docs/data-best-practices#training-serving_skew_and_data_distribution">training&#x2F;serving skew</a>.<br>Also, the computation for the embedding is lighter when the input is the head part than it’s the full picture, which can boost the system’s speed performance. There are a few methods close to this expectation, like <a target="_blank" rel="noopener" href="https://freedomofkeima.com/moeflow/">Moeflow</a>, but it only supports 100 characters with an accuracy of 70% (unknown whether it is top-N or first-1-precision).</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li>How to detect characters’ heads from images</li>
+<li>How to extract semantic embeddings from heads</li>
+<li>How to make probability predictions from an embedding</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><h3 id="YOLO-for-head-detection"><a href="#YOLO-for-head-detection" class="headerlink" title="YOLO, for head detection"></a>YOLO, for head detection</h3><p>There are trained models for <em>face</em> detection, like <a target="_blank" rel="noopener" href="https://github.com/jerryli27/AniSeg/">AniSeg</a> or <a target="_blank" rel="noopener" href="https://github.com/nagadomi/animeface-2009">animeface-2009</a> and <a target="_blank" rel="noopener" href="https://github.com/grapeot/AnimeHeadDetector">AnimeHeadDetector</a>. The reasons why we didn’t use them are:</p>
+<ol>
+<li>They are a little bit out of date, considering the state-of-art;</li>
+<li>More importantly, they detect <em>faces</em> instead of <em>head</em>, except AnimeHeadDetector.</li>
+</ol>
+<p>Since this’s a project for fun, why not try something new.</p>
+<p>YOLO is an excellent system for object detection. Officially, the latest version publishes is [V4]. But, I have to admit the <a target="_blank" rel="noopener" href="https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects">training method</a> showing in their Github is too chaotic. Because this’s a project for fun (again), why not use another user-friendly framework <a target="_blank" rel="noopener" href="https://github.com/ultralytics/yolov5">yolov5</a>. It’s <strong>not</strong> an authentical YOLO version. However, the performance is still decent, and its customed training method is pretty clean.</p>
+<p>Here, I used the predicted label from the previous model and made changes so that the label box cover the whole head. To avoid the model only learn oval&#x2F;ellipse contours to detect head, we added 1-3 randomly colored circles to training images.</p>
+<pre><code class="python">def add_sphere(im: Image, xmin, ymin, xmax, ymax):
+    draw_time = random.randint(1, 3)
+    for _ in range(draw_time):
+        draw_random_sphere(im, xmin, ymin, xmax, ymax)
+</code></pre>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/test_img.gif" alt="Testing"></p>
+<h3 id="Metric-learning-for-embedding-extraction"><a href="#Metric-learning-for-embedding-extraction" class="headerlink" title="Metric learning, for embedding extraction"></a>Metric learning, for embedding extraction</h3><p>To enable the search of images based on conceptually similar features from the query, we need a similarity function that can measure how similar these different representations are, i.e., the distances among them.</p>
+<p>Studies have shown that metric learning, which automatically constructs task-specific distance metrics from supervised or weakly supervised data in a machine learning manner, performs well in solving this problem, such as face recognition. It uses ranking losses, such as pairwise ranking loss<br>and triplet ranking loss, to “learn” how to produce similar representations for similar inputs and distant representations for the different inputs.</p>
+<p>Here, we used the incredible library <a target="_blank" rel="noopener" href="https://github.com/KevinMusgrave/pytorch-metric-learning">PyTorch Metric Learning</a> to conduct the training process. From the <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2003.08505">paper</a>, we learned MultiSimilarityLoss is one of the best loss functions for this task, and its parameters are simple, so we chose it as the loss function. We also followed the recommendation in that paper to use <em>Mean Average Precision at R (MAP@R)</em>, which combines the ideas of Mean Average Precision and R-precision as the primary metrics.</p>
+<p>We used the data from <a target="_blank" rel="noopener" href="https://github.com/grapeot/Danbooru2018AnimeCharacterRecognitionDataset">Danbooru 2018 Anime Character Recognition Dataset</a>. We randomly selected 45 images from the characters with more than 50 images, which results in 1551 characters and 67,545 images. The backbone MixNet-S is created by using the library, <a target="_blank" rel="noopener" href="https://github.com/rwightman/gen-efficientnet-pytorch">EfficientNets for PyTorch
+</a>, which provides pre-trained models and corresponding export methods. Since two hyperparameters can be tuned, we used <a target="_blank" rel="noopener" href="https://docs.wandb.ai/sweeps">wandb sweep</a> to assist the process. With its built-in support for <em>Parameter importance</em> and <em>Bayesian optimization</em>, it’s comfortable to compare experiments and tune the hyperparameters without writing custom code.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/sweep_ret.png" alt="Sweep result"></p>
+<h3 id="Perceptron-for-classification"><a href="#Perceptron-for-classification" class="headerlink" title="Perceptron, for classification"></a>Perceptron, for classification</h3><p>A single-layer neural network represents the most simple neural network form, and it has a fancy name, <a target="_blank" rel="noopener" href="https://computing.dcu.ie/~humphrys/Notes/Neural/single.neural.html">Perceptron</a>.</p>
+<p>Here, since the embeddings are optimized to distinguish one character’s head from that of another, a perceptron should be strong enough to handle the classification. We also made a classifier based on <em>faiss</em> and use the neighborhood to make predictions. We compared the top-5 precision of the two models and found Perceptron performs better. We also tested some traditional machine learning models, such as <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">LinearSVC</a>(slow training), <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html">KNeighborsClassifier</a>(model size too large), [RandomForestClassifier](too slow training) and <a target="_blank" rel="noopener" href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.htm">NearestCentroid</a>(inferior performance).</p>
+<p>We also a pipeline form *making embeddings” to *compare Perceptron and faiss* using MLflow. To be honest, it’s not mature enough yet. And it’s complicated to build a pipeline using MLflow. A glance at the pipeline would be like the following.</p>
+<pre><code class="python"> _get_or_run(
+    &quot;train&quot;,
+    &#123;
+        &quot;train_dir&quot;: train_dir,
+        &quot;val_dir&quot;: val_dir,
+        &quot;epochs&quot;: epochs,
+        &quot;drop_rate&quot;: drop_rate,
+        &quot;drop_connect_rate&quot;: drop_connect_rate,
+    &#125;,
+    git_commit,
+    use_cache=False,
+    )
+...
+_get_or_run(
+    &quot;export&quot;,
+    &#123;&quot;model_path&quot;: model_path, &quot;out_path&quot;: data_dir / &quot;faceEncoder.onnx&quot;&#125;,
+    git_commit,
+    use_cache=False,
+)
+_get_or_run(
+    &quot;embed&quot;,
+    &#123;
+        &quot;model_path&quot;: model_path,
+        &quot;out_path&quot;: data_dir,
+        &quot;dataset_path&quot;: embed_dataset_path,
+    &#125;,
+    git_commit,
+    use_cache=False,
+)
+</code></pre>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Datasets"><a href="#Datasets" class="headerlink" title="Datasets"></a>Datasets</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://www.kaggle.com/yewtsing/anime-head-detection">Anime character head labelled dataset</a> for YOLO training</li>
+<li><a target="_blank" rel="noopener" href="https://www.kaggle.com/yewtsing/anime-heads">815 anime character head dataset</a> with more than 99 heads per character for embedder training</li>
+<li><a target="_blank" rel="noopener" href="https://www.kaggle.com/yewtsing/anime-heads">1551 anime character head dataset</a> with 45 heads per character for each for classifier training</li>
+</ol>
+<h3 id="Crystal-Eyes"><a href="#Crystal-Eyes" class="headerlink" title="Crystal Eyes"></a>Crystal Eyes</h3><p>This system’s advantage is that the recognition doesn’t rely on indexing, making it lightweight and enabling it to recognize <strong>unseen images</strong>.</p>
+<p>To our knowledge, Crystal Eyes is the first system that can recognize more than <em>1500</em> 2D characters with high performance using machine learning.</p>
+<p>With 25 images’ embeddings as training data and 20 images’ embeddings as test data for each character, the classifier can achieve <strong>0.860</strong> top-3 accuracy and <strong>0.892</strong> top-5 accuracy.</p>
+<p>It can recognize colored 2D characters and their sketches but with low confidence. We used the samples Google failed at before as examples.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/color.png" alt="color"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/line.png" alt="line"></p>
+<p>Here, we show a possible application for the system, that is, to tell the user whether the character newly designed is original enough.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/brown_hair.png" alt="brown hair"></p>
+<p>Right! This face with brown hair and brown eyes is too similar to Misaka, the protagonist in <em>A Certain Scientific Railgun</em> (actually, it’s Misaka’s sketch colored by <em>Colorizer</em>, a GAN system using <a target="_blank" rel="noopener" href="https://github.com/blandocs/Tag2Pix">Tag2Pix</a>). But if we colored the hair with black hair and red eyes, it may turn out to be an original character (just kidding).</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/crystal_e/black_hair.png" alt="black hair"></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/01/02/pretty_face/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/pretty_face/sketch2.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Generate Charming Faces From Sketch</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/04/10/kidney_app/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/kk/architecture.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/kk/architecture.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Kenny the Kidney: A Mobile Health Application</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Kiyoshi Mu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Kiyoshi</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+  </div>
+  <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/KiyoshiMu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://www.linkedin.com/in/yewtsing-moo/" class="fa fa-linkedin" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            Home
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            Category
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Work/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  Work
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Personal-Project/">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  Personal Project
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Whim/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Whim
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            About
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</body>
+</html>

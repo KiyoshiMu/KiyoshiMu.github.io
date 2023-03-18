@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">Avoid Late Flight: A Toy Project | Portfolio</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "A place where my traces stay";
+  mashiro_option.author_name = "A place where my traces stay";
+  mashiro_option.site_url = "https://github.com/KiyoshiMu/KiyoshiMu.github.io";
+  mashiro_option.v_appId = "";
+  mashiro_option.v_appKey = "";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://storage.googleapis.com/portport/imgs/bg/bg1.svg,https://storage.googleapis.com/portport/imgs/bg/bg2.svg,https://storage.googleapis.com/portport/imgs/bg/bg3.svg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert("Hey there, we haven't added support for IE yet~");
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Portfolio" type="application/atom+xml">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <!-- <div class="header-tou">
+        <a target="_blank" rel="noopener" href="https://github.com/KiyoshiMu/KiyoshiMu.github.io">
+          <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+        </a>
+      </div> -->
+      <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Hi, welcome!">Hi, welcome!</h1>
+      <div class="header-info">
+        <p>Flowers may blossom twice, but no one will be young again.</p>
+        <div class="top-social_v2">
+          <li id="bg-pre" style="cursor: pointer">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/KiyoshiMu" target="_blank" class="social-github" title="github">
+                    <img src="/images/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" class="social-github" title="linkedin">
+                    <img src="/images/linkedin.svg">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next" style="cursor: pointer">
+
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <!-- <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div> -->
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">A place where my traces stay</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    Home
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    Category
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Work/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          Work
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Personal-Project/">
+                          <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                          Personal Project
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Whim/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Whim
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/about/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    About
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://storage.googleapis.com/portport/imgs/flight/flight.svg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/flight/flight.svg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Avoid Late Flight: A Toy Project</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">Kiyoshi</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-12-20<span class="bull">
+        ·</span>
+      <!-- <span id="busuanzi_value_page_pv"></span>次阅读</p> -->
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Imagine you’re going to a remote place where you will have a super important meeting. If you’ll be late, it’s better to cancel the meeting early (when the airplane’s wheels get off) than letting the CEO or CTO wait for your arrival, annoying that you dare to disrespect them.</p>
+<p>Still, it’s acceptable for someone to be late for <strong>less than 10 minutes</strong>. After all, it’s understandable that as a non-machine, it’s hard to be punctual every time. As a result, you wonder if you can predict whether you will be too late. Then, you can have as many not-too-late conferences as possible, that would be so great!</p>
+<p>This project’s goal is to make this vision become a reality. I built a deep-learning model that can give you a suggestion about whether to cancel a meeting.</p>
+<p>I know you may want to try it first. <a target="_blank" rel="noopener" href="https://forms.gle/SYNVKpKsd7vy3qYT6">Here</a> you go. (If you didn’t receive an email, which means the server on GCP is down to save my money, sorry.)</p>
+<h2 id="Main-Problems"><a href="#Main-Problems" class="headerlink" title="Main Problems"></a>Main Problems</h2><ol>
+<li><p>How to build an infrastructure that can automatically download and clean data monthly?</p>
+</li>
+<li><p>How to build a deep-learning model in a cloud environment?</p>
+</li>
+<li><p>How to deploy the model as an application?</p>
+</li>
+</ol>
+<h2 id="Solutions-I-applied"><a href="#Solutions-I-applied" class="headerlink" title="Solutions I applied"></a>Solutions I applied</h2><p><strong>(Go to <a target="_blank" rel="noopener" href="https://github.com/YewtsingMu/airline_demo">https://github.com/YewtsingMu/airline_demo</a> for a more detailed illustration)</strong></p>
+<p>I used the flight data in 2018 from <a target="_blank" rel="noopener" href="https://www.transtats.bts.gov/">Transtats</a>. I leveraged the Google Cloud Platform to complete the tasks below:</p>
+<ol>
+<li>Build microservices that can automatically download and clean data monthly</li>
+<li>Batch download data of 2018 and processing them</li>
+<li>Randomly sample 80% data to build a deep-learning model</li>
+<li>Use half of the rest data to evaluate the model</li>
+<li>Deploy the model</li>
+</ol>
+<h3 id="Microservices-achieve-automatically-downloading"><a href="#Microservices-achieve-automatically-downloading" class="headerlink" title="Microservices achieve automatically downloading"></a>Microservices achieve automatically downloading</h3><p>In this part, I prepared the data to train the goal model. Below is the diagram of this part.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/airweb.jpg" alt="Automatically downloading"></p>
+<p>I used Cloud Schedule, Cloud Pubsub, Cloud Functions, and Cloud Dataflow as microservices together to perform monthly auto-downloading, processing, and saving tasks.</p>
+<p>The Cloud Scheduler will initiate a message sending to Cloud Pubsub’s “monthly-reminder” topic. When the message comes, it’ll trigger a Cloud Function, downloading the latest monthly data from the Transtats, unzip it, changing the name, and save it as a CSV file to the Cloud Storage. When the new CSV file is successfully saved in Cloud Storage, it’ll trigger another Cloud Function, which will submit a job to Cloud Dataflow. Cloud Dataflow will then digest the new data, do some transformation, and finally, sink it into Bigquery, the data warehouse.</p>
+<h4 id="Cloud-Dataflow-–-Data-Preparision"><a href="#Cloud-Dataflow-–-Data-Preparision" class="headerlink" title="Cloud Dataflow – Data Preparision"></a>Cloud Dataflow – Data Preparision</h4><p><img src="https://storage.googleapis.com/portport/imgs/flight/dataflow.jpg" alt="Processing situation"></p>
+<h3 id="Bigquery-Datastudio-–-Data-Exploration"><a href="#Bigquery-Datastudio-–-Data-Exploration" class="headerlink" title="Bigquery + Datastudio – Data Exploration"></a>Bigquery + Datastudio – Data Exploration</h3><p>Bigquery is the data warehouse, and its cost is equivalent to the cost of Google Storage. As a result, the cost will not increase even if I store the data in this place to interact with the data.</p>
+<p>What do I mean by “interact with the data”? In Bigquery, I can query questions I am interested in, like whether some carriers are more likely to have a late arrival or whether seasons can influence the flights’ delay. Besides, the data can be loaded into Data Studio, a visualization tool based on Bigquery.</p>
+<p>Here, I show the result of my question below. The type of carrier, the season, the distance, and the locations have relations with the delay, which fit my intuition. (I know you will be more excited about something anti-intuition).</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/flight_report.jpg" alt="Data Studio answers my questions"></p>
+<p>Moreover, it’s not a static visualization tool. When I say it’s based on Bigquery, I mean you can “query” data by touching these icons. For example, you can select a specific date range. All the visualization will change automatically as a result.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/studio_change.png" alt="Data Studio Interaction"></p>
+<p>From the exploration in Data Studio, I notice that the carriers, locations, department delay, distance, and DateTime more or less can influence the delay of the flight. Therefore, I selected related features, including ‘arr_lat’, ‘dep_lat’, ‘dep_lng’, ‘arr_lng’, ‘DEP_DELAY’, ‘DISTANCE’, ‘hour’, ‘month’, and ‘MKT_UNIQUE_CARRIER’ to train a sophisticated model. But before that, let’s come back to Bigquery.</p>
+<p>Bigquery is not just a tool providing essential SQL functions. I can build a logistic model here as a baseline for my future sophisticated deep learning model.</p>
+<p>I used the “rand()” function to sample the training dataset, evaluation dataset, and test dataset. Oh, don’t forget as common sense in machine learning – it’s essential to have balanced negative and positive samples in the training data, i.e., having a similar amount of “cancel” data and “non-cancel” data. Then, I can use the ML training function in Bigquery to train the first basic model for this dataset and see its performance.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bq_train.jpg" alt="Bigquery Training"></p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bqbase.jpg" alt="Bigquery Training Result"></p>
+<p>Don’t be fool by the training result, and the below is the real evaluation performance. Nice, the logistic model can achieve AUC around 0.798. And it’s the baseline I need to break.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/bqeval.jpg" alt="Bigquery Evaulation"></p>
+<h3 id="Model-Training"><a href="#Model-Training" class="headerlink" title="Model Training"></a>Model Training</h3><p>In this part, I trained four types of models and deployed the best. Below is the diagram of this part.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/model_train.jpg" alt="Model Training"></p>
+<p>To train a machine learning model, I think, is just like cooking. If there is a recipe, I should try the existing recipe first. To reinvent pizza is not fun, and the new pizza may not as tasty as the “experienced” pizza. In the AI Platform, there are three build-in algorithms, and I should try them first.</p>
+<p>The three algorithms are XGBoost, wide and deep model, and linear learner model. XGBoost tree is a kind of traditional machine learning model. Like random forest tree, it’s based on decision tree ensembles, which combine the results of multiple classifications and regression models. The wide and deep model combines a linear model that learns and “memorizes” a wide range of rules with a deep neural network that “generalizes” the rules. A linear learner model assigns one weight to each input feature and sums the weights to predict a numerical target value. See more <a target="_blank" rel="noopener" href="https://cloud.google.com/ml-engine/docs/algorithms/overview">details</a>.</p>
+<p>Their final evaluation results are compared as follows. Strangely, this final evaluation in logging for build-in algorithms seems only to use part of the evaluation data. As a result, I have to evaluate the best built-in models by using all the evaluation data.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Final AUC Evaluation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">XGBoost</td>
+<td align="center">0.865</td>
+</tr>
+<tr>
+<td align="center">Linear learner model</td>
+<td align="center">0.923</td>
+</tr>
+<tr>
+<td align="center">Wide and deep model</td>
+<td align="center">0.961</td>
+</tr>
+</tbody></table>
+<p>The wide and deep model performs the best here. Now, it’s time to write my code and see whether I could beat Google’s automation.</p>
+<p>Luckily, mine is better than Google’s automatic data processing and model creation.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/final_auc.jpg" alt="Best Model"></p>
+<p>Here, we can do model examinations to know the model’s pros and cons and then can “targeted” refined the model. For example, use the <a target="_blank" rel="noopener" href="https://pair-code.github.io/what-if-tool/">What-if tool</a>. However, from my experiences, this tool is not friendly with the AI Platform. Also, it’s not directly related to GCP. So, I skip this part.</p>
+<p>Then, it’s time to deploy the model.</p>
+<h3 id="Model-Deployment"><a href="#Model-Deployment" class="headerlink" title="Model Deployment"></a>Model Deployment</h3><p>In this part, I used the Google Sheet as the platform and AI-platform as the backend to deploy my model. Below is the diagram of this part. And the idea of using Google Sheet in this way is from “<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=vnm6ViI06MM">How to Grow a Spreadsheet into an Application, Google Next 2019</a>“</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/deploy.jpg" alt="Model Deployment"></p>
+<p>As mentioned in one of my previous posts, here come at least three solutions.</p>
+<p>First, simply click the “Deploy Model”. Then GCP will deploy it on ML engines and handle all the other processes. Second, you can deploy the model by yourself, and using docker to make the model service containerized is the option. It’s super fast to write a Dockerfile based on <a target="_blank" rel="noopener" href="https://github.com/tensorflow/serving">TensorFlow Serving</a> and use <a target="_blank" rel="noopener" href="https://cloud.google.com/cloud-build/">Google Build</a> to wrap the model into a container and deploy it to <a target="_blank" rel="noopener" href="https://cloud.google.com/kubernetes-engine/">Kubernetes</a>. Last, to achieve full DIY, you can choose to use a VM and do what you want. In this case, you have to set the networking forwarding rules, safety rules, etc..</p>
+<p>For simplicity, I selected the first option. Here, it’s worth to notice that to invoke a model deployed on Google ML engines, a role for “ML Engine Developer” is <a target="_blank" rel="noopener" href="https://cloud.google.com/ml-engine/docs/access-control">needed</a>. A helpful practice is to create a server account with this role and grant this server account to a microserver on Google Functions.</p>
+<p>I chose Google Sheet as the platform to create a demo APP. Google Sheet has the database, UI, security, and loads of built-in APIs. To match this platform, I used Google Forms as the APP UI.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/msg.jpg" alt="Sample Msg"></p>
+<h3 id="Wrap-Up"><a href="#Wrap-Up" class="headerlink" title="Wrap Up"></a>Wrap Up</h3><p>Let’s wrap up with the whole structure.</p>
+<p><img src="https://storage.googleapis.com/portport/imgs/flight/whole_air.jpg" alt="Whole Structure"></p>
+<h2 id="Better-Solutions-I-know-now"><a href="#Better-Solutions-I-know-now" class="headerlink" title="Better Solutions I know now"></a>Better Solutions I know now</h2><p>Convert the model as Tensorflow.JS and deploy it on the client-side to achieve zero maintenance cost.</p>
+<p>Use Flutter or Angular to write a more beautiful and customized UI.</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/10/kidney_app/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/kk/architecture.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/kk/architecture.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Kenny the Kidney: A Mobile Health Application</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/06/12/survival_analysis/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://storage.googleapis.com/portport/imgs/snbcs/banner.svg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://storage.googleapis.com/portport/imgs/snbcs/banner.svg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Survival Analysis by Breast Cancer Slides</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://storage.googleapis.com/portport/imgs/profile.jpg" itemprop="image" alt="Kiyoshi" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">Kiyoshi</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Kiyoshi Mu<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2021</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>&<a href="https://www.linkedin.com/in/yewtsing-moo/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Kiyoshi</a>, Powered by Hexo, Hosted by Github Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://www.youtube.com/watch?v=oKOW30gSMuE","name":"Avenoir: The Desire To See Memories In Advance","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://storage.googleapis.com/portport/imgs/profile.jpg">
+  </div>
+  <p style="text-align: center; color: rgb(87, 85, 85); font-weight: 600; font-family: 'Ubuntu', sans-serif; letter-spacing: 1px">A place where my traces stay</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/KiyoshiMu" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://www.linkedin.com/in/yewtsing-moo/" class="fa fa-linkedin" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            Home
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            Category
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Work/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  Work
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Personal-Project/">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  Personal Project
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Whim/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Whim
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/about/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            About
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2021</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+</body>
+</html>
